@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="home"  extends="struts-default"> 	
+        <action name="index" class="com.sshdemo.common.web.HomeAction">
+            <result>/WEB-INF/page/home.jsp</result>
+        </action>
+        <action name="login">
+            <result>/WEB-INF/page/login.jsp</result>
+        </action>
+        <action name="accessDenied" class="com.sshdemo.common.web.AccessDeniedAction">
+            <result>/WEB-INF/page/accessDenied.jsp</result>
+        </action>
+    </package>
+</struts>

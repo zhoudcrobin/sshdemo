@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="persistenceUnit" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<non-jta-data-source>dataSource</non-jta-data-source>
+		<class>com.sshdemo.common.security.manage.model.Authority</class>
+		<class>com.sshdemo.common.security.manage.model.Group</class>
+		<class>com.sshdemo.common.security.manage.model.User</class>
+		<class>com.sshdemo.common.security.manage.model.UserInfo</class>
+		<class>com.sshdemo.common.security.web.authentication.rememberme.model.RememberMeToken</class>
+		<class>com.sshdemo.common.extendds.model.BaseDS</class>
+		<class>com.sshdemo.common.extendds.model.BeanDS</class>
+		<class>com.sshdemo.common.extendds.model.CustomDS</class>
+		<class>com.sshdemo.common.extendds.model.JdbcDS</class>
+		<class>com.sshdemo.common.extendds.model.JndiDS</class>
+		<class>com.sshdemo.common.report.model.CategoryReport</class>
+		<class>com.sshdemo.common.report.model.ChartReport</class>
+		<class>com.sshdemo.common.report.model.Parameter</class>
+		<class>com.sshdemo.common.report.model.Repository</class>
+		<class>com.sshdemo.common.report.model.TextReport</class>
+		<class>com.sshdemo.common.report.model.data.Data</class>
+		<class>com.sshdemo.common.report.model.data.SqlData</class>
+		<class>com.sshdemo.common.report.model.data.StaticData</class>
+		<class>com.sshdemo.common.report.model.view.BooleanView</class>
+		<class>com.sshdemo.common.report.model.view.CheckView</class>
+		<class>com.sshdemo.common.report.model.view.ComponentView</class>
+		<class>com.sshdemo.common.report.model.view.DateView</class>
+		<class>com.sshdemo.common.report.model.view.ListView</class>
+		<class>com.sshdemo.common.report.model.view.SessionView</class>
+		<class>com.sshdemo.common.report.model.view.TextView</class>
+		<class>com.sshdemo.common.schedule.generate.job.report.model.EwcmsJobReport</class>
+		<class>com.sshdemo.common.schedule.generate.job.report.model.EwcmsJobParameter</class>
+		<class>com.sshdemo.common.schedule.model.JobCalendarTrigger</class>
+		<class>com.sshdemo.common.schedule.model.JobClass</class>
+		<class>com.sshdemo.common.schedule.model.JobInfo</class>
+		<class>com.sshdemo.common.schedule.model.JobSimpleTrigger</class>
+		<class>com.sshdemo.common.schedule.model.JobTrigger</class>
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.archive.autodetection" value="false"/>
+			<property name="hibernate.transaction.auto_close_session" value="false"/>
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.dialect" value="com.mysql.jdbc.Driver" />
+		</properties>
+	</persistence-unit>
+</persistence>

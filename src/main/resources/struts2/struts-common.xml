@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- entend ds -->
+	<package name="extendds" extends="struts-default" namespace="/extendds">
+		<action name="index">
+			<result>/WEB-INF/page/common/extendds/index.jsp</result>
+		</action>
+	</package>
+	<package name="extendds.bean" extends="struts-default" namespace="/extendds/bean">
+		<action name="index">
+			<result>/WEB-INF/page/common/extendds/bean/index.jsp</result>
+		</action>
+		<action name="delete" class="com.sshdemo.common.extendds.manage.web.BeanDSAction" method="delete"/>
+		<action name="input" class="com.sshdemo.common.extendds.manage.web.BeanDSAction" method="input">
+			<result name="input">/WEB-INF/page/common/extendds/bean/edit.jsp</result>
+		</action>
+		<action name="save" class="com.sshdemo.common.extendds.manage.web.BeanDSAction" method="save">
+			<result>/WEB-INF/page/common/extendds/bean/edit.jsp</result>
+			<result name="input">/WEB-INF/page/common/extendds/bean/edit.jsp</result>
+		</action>
+		<action name="query" class="com.sshdemo.common.extendds.manage.web.BeanDSQueryAction" method="query"/>
+	</package>
+	<package name="extendds.custom" extends="struts-default" namespace="/extendds/custom">
+		<action name="index">
+			<result>/WEB-INF/page/common/extendds/custom/index.jsp</result>
+		</action>
+		<action name="delete" class="com.sshdemo.common.extendds.manage.web.CustomDSAction" method="delete"/>
+		<action name="input" class="com.sshdemo.common.extendds.manage.web.CustomDSAction" method="input">
+			<result name="input">/WEB-INF/page/common/extendds/custom/edit.jsp</result>
+		</action>
+		<action name="save" class="com.sshdemo.common.extendds.manage.web.CustomDSAction" method="save">
+			<result>/WEB-INF/page/common/extendds/custom/edit.jsp</result>
+			<result name="input">/WEB-INF/page/common/extendds/custom/edit.jsp</result>
+		</action>
+		<action name="query" class="com.sshdemo.common.extendds.manage.web.CustomDSQueryAction" method="query"/>
+	</package>
+	<package name="extendds.jdbc" extends="struts-default" namespace="/extendds/jdbc">
+		<action name="index">
+			<result>/WEB-INF/page/common/extendds/jdbc/index.jsp</result>
+		</action>
+		<action name="delete" class="com.sshdemo.common.extendds.manage.web.JdbcDSAction" method="delete"/>
+		<action name="input" class="com.sshdemo.common.extendds.manage.web.JdbcDSAction" method="input">
+			<result name="input">/WEB-INF/page/common/extendds/jdbc/edit.jsp</result>
+		</action>
+		<action name="save" class="com.sshdemo.common.extendds.manage.web.JdbcDSAction" method="save">
+			<result>/WEB-INF/page/common/extendds/jdbc/edit.jsp</result>
+			<result name="input">/WEB-INF/page/common/extendds/jdbc/edit.jsp</result>
+		</action>
+		<action name="query" class="com.sshdemo.common.extendds.manage.web.JdbcDSQueryAction" method="query"/>
+	</package>
+	<package name="extendds.jndi" extends="struts-default" namespace="/extendds/jndi">
+		<action name="index">
+			<result>/WEB-INF/page/common/extendds/jndi/index.jsp</result>
+		</action>
+		<action name="delete" class="com.sshdemo.common.extendds.manage.web.JndiDSAction" method="delete"/>
+		<action name="input" class="com.sshdemo.common.extendds.manage.web.JndiDSAction" method="input">
+			<result name="input">/WEB-INF/page/common/extendds/jndi/edit.jsp</result>
+		</action>
+		<action name="save" class="com.sshdemo.common.extendds.manage.web.JndiDSAction" method="save">
+			<result>/WEB-INF/page/common/extendds/jndi/edit.jsp</result>
+			<result name="input">/WEB-INF/page/common/extendds/jndi/edit.jsp</result>
+		</action>
+		<action name="query" class="com.sshdemo.common.extendds.manage.web.JndiDSQueryAction" method="query"/>
+	</package>
+	<package name="extendds.connect" extends="struts-default" namespace="/extendds/connect">
+		<action name="test" class="com.sshdemo.common.extendds.manage.web.ConnectDSAction" method="test"/>
+	</package>
+	
+	<!-- report -->
+	<package name="report.text" extends="struts-default" namespace="/report/text">
+		<action name="index">
+			<result>/WEB-INF/page/common/report/text/index.jsp</result>
+		</action>
+		<action name="delete" class="com.sshdemo.common.report.manage.web.TextReportAction" method="delete"/>
+		<action name="input" class="com.sshdemo.common.report.manage.web.TextReportAction" method="input">
+			<result name="input">/WEB-INF/page/common/report/text/edit.jsp</result>
+		</action>
+		<action name="save" class="com.sshdemo.common.report.manage.web.TextReportAction" method="save">
+			<result>/WEB-INF/page/common/report/text/edit.jsp</result>
+			<result name="input">/WEB-INF/page/common/report/text/edit.jsp</result>
+		</action>
+		<action name="query" class="com.sshdemo.common.report.manage.web.TextReportQueryAction" method="query"/>
+		<action name="parameterType" class="com.sshdemo.common.report.manage.web.TextReportAction" method="parameterType"/>
+		<action name="download" class="com.sshdemo.common.report.manage.web.TextReportAction" method="download" />
+		<action name="findTextReport" class="com.sshdemo.common.report.manage.web.TextReportAction" method="findTextReport" />
+	</package>
+	<package name="report.chart" extends="struts-default" namespace="/report/chart">
+		<action name="index">
+			<result>/WEB-INF/page/common/report/chart/index.jsp</result>
+		</action>
+		<action name="delete" class="com.sshdemo.common.report.manage.web.ChartReportAction" method="delete"/>
+		<action name="input" class="com.sshdemo.common.report.manage.web.ChartReportAction" method="input">
+			<result name="input">/WEB-INF/page/common/report/chart/edit.jsp</result>
+		</action>
+		<action name="save" class="com.sshdemo.common.report.manage.web.ChartReportAction" method="save">
+			<result>/WEB-INF/page/common/report/chart/edit.jsp</result>
+			<result name="input">/WEB-INF/page/common/report/chart/edit.jsp</result>
+		</action>
+		<action name="query" class="com.sshdemo.common.report.manage.web.ChartReportQueryAction" method="query"/>
+		<action name="parameterType" class="com.sshdemo.common.report.manage.web.ChartReportAction" method="parameterType"/>
+		<action name="findChartReport" class="com.sshdemo.common.report.manage.web.ChartReportAction" method="findChartReport" />
+		<action name="help">
+			<result>/WEB-INF/page/common/report/chart/sql_help.jsp</result>
+		</action>	</package>
+	<package name="report.repository" extends="struts-default" namespace="/report/repository">
+		<action name="index">
+			<result>/WEB-INF/page/common/report/repository/index.jsp</result>
+		</action>
+		<action name="delete" class="com.sshdemo.common.report.manage.web.RepositoryAction" method="delete"/>
+		<action name="query" class="com.sshdemo.common.report.manage.web.RepositoryQueryAction" method="query"/>
+		<action name="download" class="com.sshdemo.common.report.manage.web.RepositoryAction" method="download"/>
+		<action name="publish" class="com.sshdemo.common.report.manage.web.RepositoryAction" method="publish"/>
+	</package>
+	<package name="report.parameter" extends="struts-default" namespace="/report/parameter">
+		<action name="index" class="com.sshdemo.common.report.manage.web.ParameterAction">
+			<result>/WEB-INF/page/common/report/parameter/index.jsp</result>
+		</action>
+		<action name="input" class="com.sshdemo.common.report.manage.web.ParameterAction" method="input">
+			<result name="input">/WEB-INF/page/common/report/parameter/edit.jsp</result>
+		</action>
+		<action name="save" class="com.sshdemo.common.report.manage.web.ParameterAction" method="save">
+			<result>/WEB-INF/page/common/report/parameter/edit.jsp</result>
+			<result name="input">/WEB-INF/page/common/report/parameter/edit.jsp</result>
+		</action>
+		<action name="query" class="com.sshdemo.common.report.manage.web.ParameterQueryAction" method="query"/>
+		<action name="sessionInfo" class="com.sshdemo.common.report.manage.web.ParameterAction" method="sessionInfo"/>
+	</package>
+	<package name="report.category" extends="struts-default" namespace="/report/category">
+		<action name="index" class="com.sshdemo.common.report.manage.web.CategoryReportAction">
+			<result>/WEB-INF/page/common/report/category/index.jsp</result>
+		</action>
+		<action name="input" class="com.sshdemo.common.report.manage.web.CategoryReportAction" method="input">
+			<result name="input">/WEB-INF/page/common/report/category/edit.jsp</result>
+		</action>
+		<action name="save" class="com.sshdemo.common.report.manage.web.CategoryReportAction" method="save">
+			<result>/WEB-INF/page/common/report/category/edit.jsp</result>
+			<result name="input">/WEB-INF/page/common/report/category/edit.jsp</result>
+		</action>
+		<action name="categoryreport" class="com.sshdemo.common.report.manage.web.CategoryReportAction" method="categoryReport">
+			<result>/WEB-INF/page/common/report/show/categoryreport.jsp</result>
+		</action>		
+		<action name="delete" class="com.sshdemo.common.report.manage.web.CategoryReportAction" method="delete"/>
+		<action name="query" class="com.sshdemo.common.report.manage.web.CategoryReportQueryAction" method="query"/>
+	</package>
+	<package name="report.category.detail" extends="struts-default" namespace="/report/category/detail">
+		<action name="index" class="com.sshdemo.common.report.manage.web.CategoryReportDetailAction">
+			<result>/WEB-INF/page/common/report/category/detail/index.jsp</result>
+		</action>
+		<action name="input" class="com.sshdemo.common.report.manage.web.CategoryReportDetailAction" method="input">
+			<result name="input">/WEB-INF/page/common/report/category/detail/edit.jsp</result>
+		</action>
+		<action name="save" class="com.sshdemo.common.report.manage.web.CategoryReportDetailAction" method="save">
+			<result>/WEB-INF/page/common/report/category/detail/edit.jsp</result>
+			<result name="input">/WEB-INF/page/common/report/category/detail/edit.jsp</result>
+		</action>
+		<action name="query" class="com.sshdemo.common.report.manage.web.CategoryReportDetailQueryAction" method="query"/>
+	</package>
+	<package name="report.show" extends="struts-default" namespace="/report/show">
+        <action name="index" class="com.sshdemo.common.report.manage.web.ShowReportAction">
+            <result>/WEB-INF/page/common/report/show/index.jsp</result>
+        </action>
+        <action name="paraset" class="com.sshdemo.common.report.manage.web.ParameterSetAction">
+            <result>/WEB-INF/page/common/report/show/paraset.jsp</result>
+        </action>
+        <action name="build" class="com.sshdemo.common.report.manage.web.ParameterSetAction" method="build"/>
+    </package>	
+    
+	<!--  schedule -->
+		<package name="scheduling.jobclass" extends="struts-default" namespace="/scheduling/jobclass">
+		<action name="index">
+			<result>/WEB-INF/page/common/schedule/jobclass/index.jsp</result>
+		</action>
+		<action name="delete" class="com.sshdemo.common.schedule.manage.web.JobClassAction" method="delete"/>
+		<action name="query" class="com.sshdemo.common.schedule.manage.web.JobClassQueryAction" method="query"/>
+		<action name="input" class="com.sshdemo.common.schedule.manage.web.JobClassAction" method="input">
+			<result name="input">/WEB-INF/page/common/schedule/jobclass/edit.jsp</result>
+		</action>
+		<action name="save" class="com.sshdemo.common.schedule.manage.web.JobClassAction" method="save">
+			<result>/WEB-INF/page/common/schedule/jobclass/edit.jsp</result>
+			<result name="input">/WEB-INF/page/common/schedule/jobclass/edit.jsp</result>
+		</action>
+	</package>
+	<package name="scheduling.jobinfo" extends="struts-default" namespace="/scheduling/jobinfo">
+		<action name="index">
+			<result>/WEB-INF/page/common/schedule/jobinfo/index.jsp</result>
+		</action>
+		<action name="delete" class="com.sshdemo.common.schedule.manage.web.JobInfoAction" method="delete"/>
+		<action name="query" class="com.sshdemo.common.schedule.manage.web.JobInfoQueryAction" method="query"/>
+		<action name="input" class="com.sshdemo.common.schedule.manage.web.JobInfoAction" method="input">
+			<result name="input">/WEB-INF/page/common/schedule/jobinfo/edit.jsp</result>
+		</action>
+		<action name="save" class="com.sshdemo.common.schedule.manage.web.JobInfoAction" method="save">
+			<result>/WEB-INF/page/common/schedule/jobinfo/edit.jsp</result>
+			<result name="input">/WEB-INF/page/common/schedule/jobinfo/edit.jsp</result>
+		</action>
+		<action name="pause" class="com.sshdemo.common.schedule.manage.web.JobInfoAction" method="pauseJob">
+			<result>/WEB-INF/page/common/schedule/jobinfo/index.jsp</result>
+		</action>
+		<action name="resumed" class="com.sshdemo.common.schedule.manage.web.JobInfoAction" method="resumedJob">
+			<result>/WEB-INF/page/common/schedule/jobinfo/index.jsp</result>
+		</action>
+		<!-- 
+		<action name="allJobClassList" class="com.ewcms.web.action.scheduling.job.JobAction" method="getAllJobClassList"/>
+		 -->
+	</package>
+	<package name="scheduling.jobchannel" extends="struts-default" namespace="/scheduling/jobchannel">
+		<action name="index" class="com.sshdemo.common.schedule.manage.web.JobChannelAction" method="getJobChannel">
+			<result name="input">/WEB-INF/page/common/schedule/jobinfo/edit_channel.jsp</result>
+		</action>
+		<action name="save" class="com.sshdemo.common.schedule.manage.web.JobChannelAction" method="saveJobChannel">
+			<result>/WEB-INF/page/common/schedule/jobinfo/edit_channel.jsp</result>
+			<result name="input">/WEB-INF/page/common/schedule/jobinfo/edit_channel.jsp</result>
+		</action>
+	</package>
+	<package name="scheduling.jobcrawler" extends="struts-default" namespace="/scheduling/jobcrawler">
+		<action name="index" class="com.sshdemo.common.schedule.manage.web.JobCrawlerAction" method="getJobCrawler">
+			<result name="input">/WEB-INF/page/common/schedule/jobinfo/edit_crawler.jsp</result>
+		</action>
+		<action name="save" class="com.sshdemo.common.schedule.manage.web.JobCrawlerAction" method="saveJobCrawler">
+			<result>/WEB-INF/page/common/schedule/jobinfo/edit_crawler.jsp</result>
+			<result name="input">/WEB-INF/page/common/schedule/jobinfo/edit_crawler.jsp</result>
+		</action>
+	</package>
+	<package name="scheduling.jobreport" extends="struts-default" namespace="/scheduling/jobreport">
+		<action name="index" class="com.sshdemo.common.schedule.manage.web.JobReportAction" method="getJobReport">
+			<result name="input">/WEB-INF/page/common/schedule/jobinfo/edit_report.jsp</result>
+		</action>
+		<action name="save" class="com.sshdemo.common.schedule.manage.web.JobReportAction" method="saveJobReport">
+			<result>/WEB-INF/page/common/schedule/jobinfo/edit_report.jsp</result>
+			<result name="input">/WEB-INF/page/common/schedule/jobinfo/edit_report.jsp</result>
+		</action>
+	</package>
+	
+	<!--  security -->
+	
+	    <package name="security.account"  extends="struts-default" namespace="/account">
+        <action name="password" class="com.sshdemo.common.security.manage.web.account.PasswordAction" method="input">
+            <result name="input">/WEB-INF/page/common/security/account/password.jsp</result>
+        </action>
+        <action name="savePassword" class="com.sshdemo.common.security.manage.web.account.PasswordAction">
+            <result name="input">/WEB-INF/page/common/security/account/password.jsp</result>
+            <result name="error">/WEB-INF/page/common/security/account/password.jsp</result>
+            <result>/WEB-INF/page/common/security/account/password.jsp</result>
+        </action>
+        <action name="user" class="com.sshdemo.common.security.manage.web.account.UserAction" method="input">
+            <result name="input">/WEB-INF/page/common/security/account/user.jsp</result>
+        </action>
+        <action name="saveUser" class="com.sshdemo.common.security.manage.web.account.UserAction">
+            <result name="input">/WEB-INF/page/common/security/account/user.jsp</result>
+            <result name="error">/WEB-INF/page/common/security/account/user.jsp</result>
+            <result>/WEB-INF/page/common/security/account/user.jsp</result>
+        </action>
+    </package>
+   
+    <package name="security.authority"  extends="struts-default" namespace="/security/authority">
+        <action name="index">
+            <result type="dispatcher">/WEB-INF/page/common/security/authority/index.jsp</result>
+        </action>
+        <action name="query" class="com.sshdemo.common.security.manage.web.authority.QueryAction" method="query"/>
+    </package>
+    
+    <package name="security.group"  extends="struts-default" namespace="/security/group">
+    
+        <action name="index">
+            <result type="dispatcher">/WEB-INF/page/common/security/group/index.jsp</result>
+        </action>
+        <action name="query" class="com.sshdemo.common.security.manage.web.group.QueryAction" method="query"/>
+        
+        <action name="detail" class="com.sshdemo.common.security.manage.web.group.DetailAction">
+            <result>/WEB-INF/page/common/security/group/detail.jsp</result>
+        </action>
+        <action name="detailQuery" class="com.sshdemo.common.security.manage.web.group.DetailAction" method="query"/>
+        <action name="addAuthsAndUsers" class="com.sshdemo.common.security.manage.web.group.DetailAction" method="addAuthsAndUsers"/>
+        <action name="removeAuthsAndUsers" class="com.sshdemo.common.security.manage.web.group.DetailAction" method="removeAuthsAndUsers"/>
+         
+        <action name="input" class="com.sshdemo.common.security.manage.web.group.GroupAction" method="input"> 
+            <result name="input">/WEB-INF/page/common/security/group/edit.jsp</result>
+        </action>
+        <action name="hasGroupname" class="com.sshdemo.common.security.manage.web.group.GroupAction" method="hasGroupname"/>
+        <action name="save" class="com.sshdemo.common.security.manage.web.group.GroupAction">
+            <result name="input">/WEB-INF/page/common/security/group/edit.jsp</result> 
+            <result name="error">/WEB-INF/page/common/security/group/edit.jsp</result> 
+            <result>/WEB-INF/page/common/security/group/edit.jsp</result>
+        </action>
+        <action name="delete" class="com.sshdemo.common.security.manage.web.group.GroupAction" method="delete"/>
+    </package>
+    
+    <package name="security.user"  extends="struts-default" namespace="/security/user">
+        <action name="index">
+          <result type="dispatcher">/WEB-INF/page/common/security/user/index.jsp</result>
+        </action>
+        <action name="query" class="com.sshdemo.common.security.manage.web.user.QueryAction" method="query"/>
+        
+        <action name="detail" class="com.sshdemo.common.security.manage.web.user.DetailAction">
+            <result>/WEB-INF/page/common/security/user/detail.jsp</result>
+        </action>
+        <action name="detailQuery" class="com.sshdemo.common.security.manage.web.user.DetailAction" method="query"/>
+        <action name="addAuthsAndGroups" class="com.sshdemo.common.security.manage.web.user.DetailAction" method="addAuthsAndGroups"/>
+        <action name="removeAuthsAndGroups" class="com.sshdemo.common.security.manage.web.user.DetailAction" method="removeAuthsAndGroups"/>
+        
+        <action name="input" class="com.sshdemo.common.security.manage.web.user.UserAction" method="input"> 
+             <result name="input">/WEB-INF/page/common/security/user/edit.jsp</result>
+         </action>
+         <action name="hasUsername" class="com.sshdemo.common.security.manage.web.user.UserAction" method="hasUsername"/>
+         <action name="save" class="com.sshdemo.common.security.manage.web.user.UserAction">
+             <result name="input">/WEB-INF/page/common/security/user/edit.jsp</result> 
+             <result name="error">/WEB-INF/page/common/security/user/edit.jsp</result> 
+             <result>/WEB-INF/page/common/security/user/edit.jsp</result>
+         </action>
+         <action name="delete" class="com.sshdemo.common.security.manage.web.user.UserAction" method="delete"/>
+         <action name="active" class="com.sshdemo.common.security.manage.web.user.UserAction" method="active"/>
+         <action name="inactive" class="com.sshdemo.common.security.manage.web.user.UserAction" method="inactive"/>
+         
+          <action name="initpassword" class="com.sshdemo.common.security.manage.web.user.InitPasswordAction" method="input">
+            <result name="input">/WEB-INF/page/common/security/user/initpassword.jsp</result>
+        </action>
+        <action name="saveInitPassword" class="com.sshdemo.common.security.manage.web.user.InitPasswordAction">
+            <result name="input">/WEB-INF/page/common/security/user/initpassword.jsp</result>
+            <result name="error">/WEB-INF/page/common/security/user/initpassword.jsp</result>
+            <result>/WEB-INF/page/common/security/user/initpassword.jsp</result>
+        </action>
+    </package>
+</struts>	
