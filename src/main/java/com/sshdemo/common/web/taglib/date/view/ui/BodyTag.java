@@ -4,7 +4,7 @@
  * http://www.ewcms.com
  */
 
-package com.sshdemo.common.web.taglib.date.view;
+package com.sshdemo.common.web.taglib.date.view.ui;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

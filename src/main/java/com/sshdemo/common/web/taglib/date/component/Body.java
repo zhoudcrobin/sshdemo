@@ -22,7 +22,7 @@ import com.opensymphony.xwork2.util.ValueStack;
  *
  */
 @StrutsTag(description = "Render HTML output date body.",
-		name = "datepicker", tldTagClass = "com.sshdemo.common.web.taglib.date.view.BodyTag")
+		name = "datepicker", tldTagClass = "com.sshdemo.common.web.taglib.date.view.ui.BodyTag")
 public class Body extends UIBean {
 	private static final String TEMPLATE = "date/body";
 	private String name;

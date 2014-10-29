@@ -18,7 +18,7 @@
   <tag>
     <description><![CDATA[Render HTML output date body.]]></description>
     <name>datepicker</name>
-    <tag-class>com.sshdemo.common.web.taglib.date.view.BodyTag</tag-class>
+    <tag-class>com.sshdemo.common.web.taglib.date.view.ui.BodyTag</tag-class>
     <body-content>JSP</body-content>
     <attribute>
       <description><![CDATA[Set the html accesskey attribute on rendered html element]]></description>
@@ -283,7 +283,7 @@
   <tag>
     <description><![CDATA[Render HTML output date.]]></description>
     <name>datepickerhead</name>
-    <tag-class>com.sshdemo.common.web.taglib.date.view.HeadTag</tag-class>
+    <tag-class>com.sshdemo.common.web.taglib.date.view.ui.HeadTag</tag-class>
     <body-content>JSP</body-content>
     <attribute>
       <description><![CDATA[Set the html accesskey attribute on rendered html element]]></description>

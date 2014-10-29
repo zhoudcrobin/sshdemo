@@ -21,7 +21,7 @@ import com.opensymphony.xwork2.util.ValueStack;
  *
  */
 @StrutsTag(description = "Render HTML output date.",
-		name = "datepickerhead", tldTagClass = "com.sshdemo.common.web.taglib.date.view.HeadTag")
+		name = "datepickerhead", tldTagClass = "com.sshdemo.common.web.taglib.date.view.ui.HeadTag")
 public class Head extends UIBean {
 	private static final String TEMPLATE = "date/head";
     public Head(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {

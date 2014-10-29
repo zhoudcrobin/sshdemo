@@ -35,12 +35,7 @@
         			<td width="50%">
         				<table width="100%">
         					<tr>
-			        			<td height="30px" width="97%" style="text-align: right"><span style="font-size:13px;font-weight: bold;"><span id="user-name"><s:property value="realName"/></span>欢迎你</span> | <span id="clock"></span></td>
-        						<td width="2%"><a id="button-main" href="#" style="border:0;padding:0;"><img src="<s:url value='/ewcmssource/image/exit.png'/>" width="17" height="17" style="border:0;"/></a></td>
-        						<td width="1%"></td>
-        					</tr>
-        					<tr>
-        						<td height="20px" colspan="2" >
+        						<td height="20px" colspan="2" valign="bottom">
         							<table width="100%">
         								<tr>
         									<td width="65%" style="text-align:right;">
@@ -54,6 +49,7 @@
 													<a class="styleswitch a5" style="cursor: pointer" title="灰色" rel="pepper-grinder"></a>		
 												</div>
 			        						</td>
+			        						<td><s:property value="realName"/><a id="button-main" href="#" style="border:0;padding:0;"><img src="<s:url value='/ewcmssource/image/exit.png'/>" width="17" height="17" style="border:0;"/></a></td>
 			        					</tr>
 			        				</table>
 			        			</td>
@@ -71,6 +67,7 @@
         </div>
         <div region="south" split="true" style="height:2px;background:#efefef;overflow:hidden;"></div>
         <div region="west" split="true" title="EWCMS平台菜单" style="width:180px;padding:1px;overflow:hidden;">
+            <sec:authorize ifAnyGranted="ROLE_ADMIN">
               <div id="mainmenu" class="easyui-accordion" fit="true" border="false">
                 <div title="任务计划" style="overflow:auto;">
                 	 <div class="nav-item">
@@ -139,6 +136,7 @@
                	    </div>
                	</div>
             </div>
+             </sec:authorize>
         </div>
         <div region="center" style="overflow:hidden;">
             <div class="easyui-tabs" id="systemtab" fit="true" border="false">

@@ -4,7 +4,7 @@
  * http://www.ewcms.com
  */
 
-package com.sshdemo.common.web.taglib.date.view;
+package com.sshdemo.common.web.taglib.date.view.ui;
 import com.opensymphony.xwork2.util.ValueStack;
 import com.sshdemo.common.web.taglib.date.component.Head;
 

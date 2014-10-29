@@ -7,3 +7,4 @@ sshdemo 是一个struts2 spring hibernate  jquery easyui postgresql
 4.软件包的最新升级
 5.改进验证码的实现方法
 6.数据库mysql
+7.自定义标签的实现
