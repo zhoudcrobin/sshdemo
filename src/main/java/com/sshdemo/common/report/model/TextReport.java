@@ -28,9 +28,9 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
-import org.hibernate.annotations.GenericGenerator;
 
 import com.sshdemo.common.extendds.model.BaseDS;
+
 
 /**
  * 报表对象
@@ -53,6 +53,7 @@ import com.sshdemo.common.extendds.model.BaseDS;
  */
 @Entity
 @Table(name = "plugin_report_text")
+@SequenceGenerator(name = "seq_plugin_report_text", sequenceName = "seq_plugin_report_text_id", allocationSize = 1)
 public class TextReport implements Serializable {
 
     private static final long serialVersionUID = 2289611908936617074L;
@@ -81,8 +82,7 @@ public class TextReport implements Serializable {
         }
     }
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "persistenceGenerator", strategy = "increment")
+    @GeneratedValue(generator = "seq_plugin_report_text",strategy = GenerationType.SEQUENCE)
 	@Column(name = "id")
     private Long id;
     @Column(name = "name", length = 50, nullable = false, unique = true)

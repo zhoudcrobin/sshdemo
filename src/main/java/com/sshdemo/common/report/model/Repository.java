@@ -19,7 +19,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
-import org.hibernate.annotations.GenericGenerator;
 
 /**
  * 
@@ -28,13 +27,13 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "plugin_report_repository")
+@SequenceGenerator(name = "seq_plugin_report_repository", sequenceName = "seq_plugin_report_repository_id", allocationSize = 1)
 public class Repository implements Serializable {
 
 	private static final long serialVersionUID = -1166379145505781440L;
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "persistenceGenerator", strategy = "increment")
+	@GeneratedValue(generator = "seq_plugin_report_repository", strategy = GenerationType.SEQUENCE)
 	@Column(name = "id")
 	private Long id;
 	@Column(name = "name", nullable = false)

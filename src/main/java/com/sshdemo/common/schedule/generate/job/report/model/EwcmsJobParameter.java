@@ -19,9 +19,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import com.sshdemo.common.report.model.Parameter;
+
 
 /**
  * 报表调度器所使用的参数
@@ -36,12 +35,12 @@ import com.sshdemo.common.report.model.Parameter;
  */
 @Entity
 @Table(name = "job_report_parameter")
+@SequenceGenerator(name = "seq_job_report_parameter", sequenceName = "seq_job_report_parameter_id", allocationSize = 1)
 public class EwcmsJobParameter implements Serializable {
 
     private static final long serialVersionUID = 5822868212042814116L;
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "persistenceGenerator", strategy = "increment")
+    @GeneratedValue(generator = "seq_job_report_parameter",strategy = GenerationType.SEQUENCE)
 	@Column(name = "id")
     private Long id;
     @Column(name = "parametervalue")

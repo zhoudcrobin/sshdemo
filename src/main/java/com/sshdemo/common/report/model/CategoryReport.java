@@ -23,8 +23,6 @@ import javax.persistence.OrderBy;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerator;
-
 /**
  * 报表分类
  * 
@@ -40,13 +38,13 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "plugin_report_category")
+@SequenceGenerator(name = "seq_plugin_report_category", sequenceName = "seq_plugin_report_category_id", allocationSize = 1)
 public class CategoryReport implements Serializable {
 
     private static final long serialVersionUID = 6590119941274234278L;
     
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "persistenceGenerator", strategy = "increment") 
+    @GeneratedValue(generator = "seq_plugin_report_category",strategy = GenerationType.SEQUENCE)
 	@Column(name = "id")
     private Long id;
     @Column(name = "name", nullable = false, length = 50, unique = true)

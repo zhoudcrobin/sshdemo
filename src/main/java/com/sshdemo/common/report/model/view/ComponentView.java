@@ -15,8 +15,6 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerator;
-
 /**
  * 组件视图父类
  * 
@@ -31,13 +29,14 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "plugin_report_view")
+@SequenceGenerator(name = "seq_plugin_report_view", sequenceName = "seq_plugin_report_view_id", allocationSize = 1)
 public class ComponentView implements Serializable {
 
     private static final long serialVersionUID = 6470965538592594049L;
     
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "persistenceGenerator", strategy = "increment")	@Column(name = "id")
+    @GeneratedValue(generator = "seq_plugin_report_view",strategy = GenerationType.SEQUENCE)
+	@Column(name = "id")
     private Integer id = null;
     @Column(name = "mandatory")
     private Boolean isMandatory;

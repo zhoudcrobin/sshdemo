@@ -24,8 +24,6 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.Version;
 
-import org.hibernate.annotations.GenericGenerator;
-
 /**
  * 调度器任务
  * 
@@ -47,12 +45,12 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Table(name = "job_info")
 @Inheritance(strategy = InheritanceType.JOINED)
+@SequenceGenerator(name = "seq_job_info", sequenceName = "seq_job_info_id", allocationSize = 1)
 public class JobInfo implements Serializable {
 
     private static final long serialVersionUID = 5651638241918468407L;
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "persistenceGenerator", strategy = "increment")
+    @GeneratedValue(generator = "seq_job_info",strategy = GenerationType.SEQUENCE)
 	@Column(name = "id")
     private Long id;
     @Version

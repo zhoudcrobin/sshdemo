@@ -16,20 +16,18 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerator;
-
 /**
  * @author 吴智俊
  */
 @Entity
 @Table(name = "job_class")
+@SequenceGenerator(name = "seq_job_class", sequenceName = "seq_job_class_id", allocationSize = 1)
 public class JobClass implements Serializable {
 
 	private static final long serialVersionUID = -4428638031352721701L;
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "persistenceGenerator", strategy = "increment")
+    @GeneratedValue(generator = "seq_job_class",strategy = GenerationType.SEQUENCE)
 	@Column(name = "id")
 	private Long id;
 	@Column(name = "classname", nullable = false)

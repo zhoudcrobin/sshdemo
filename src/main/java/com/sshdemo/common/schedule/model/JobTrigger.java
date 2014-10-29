@@ -16,11 +16,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Version;
-import org.hibernate.annotations.GenericGenerator;
 
 /**
  * 触发器
@@ -39,15 +39,15 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Table(name = "job_trigger")
 @Inheritance(strategy = InheritanceType.JOINED)
+@SequenceGenerator(name = "seq_job_trigger", sequenceName = "seq_job_trigger_id", allocationSize = 1)
 public class JobTrigger implements Serializable {
 
     private static final long serialVersionUID = -6866914186969004480L;
     public static final Integer START_TYPE_NOW = 1;//立刻执行
     public static final Integer START_TYPE_SCHEDULE = 2;//调度策略
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "persistenceGenerator", strategy = "increment") 
+	@Id
+    @GeneratedValue(generator = "seq_job_trigger",strategy = GenerationType.SEQUENCE)
 	@Column(name = "id")
     private Long id;
     @Version

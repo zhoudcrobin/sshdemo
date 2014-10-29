@@ -21,10 +21,9 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import com.sshdemo.common.report.model.data.Data;
 import com.sshdemo.common.report.model.view.ComponentView;
+
 /**
  * 报表参数
  * 
@@ -44,6 +43,7 @@ import com.sshdemo.common.report.model.view.ComponentView;
  */
 @Entity
 @Table(name = "plugin_report_parameter")
+@SequenceGenerator(name = "seq_plugin_report_parameter", sequenceName = "seq_plugin_report_parameter_id", allocationSize = 1)
 public class Parameter implements Serializable {
 
     private static final long serialVersionUID = 2283573904816876354L;
@@ -67,8 +67,7 @@ public class Parameter implements Serializable {
     }
     
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "persistenceGenerator", strategy = "increment")
+    @GeneratedValue(generator = "seq_plugin_report_parameter",strategy = GenerationType.SEQUENCE)
 	@Column(name = "id")
     private Long id;
     @Column(name = "enname", nullable = false)

@@ -30,9 +30,9 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
-import org.hibernate.annotations.GenericGenerator;
 
 import com.sshdemo.common.extendds.model.BaseDS;
+
 
 /**
  * 图表
@@ -79,6 +79,7 @@ import com.sshdemo.common.extendds.model.BaseDS;
  */
 @Entity
 @Table(name = "plugin_report_chart")
+@SequenceGenerator(name = "seq_plugin_report_chart", sequenceName = "seq_plugin_report_chart_id", allocationSize = 1)
 public class ChartReport implements Serializable {
 
     private static final long serialVersionUID = -2358576914939775115L;
@@ -119,8 +120,7 @@ public class ChartReport implements Serializable {
     }
     
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "persistenceGenerator", strategy = "increment")
+    @GeneratedValue(generator = "seq_plugin_report_chart",strategy = GenerationType.SEQUENCE)
 	@Column(name = "id")
     private Long id;
     @Column(name = "name", nullable = false, length = 50, unique = true)

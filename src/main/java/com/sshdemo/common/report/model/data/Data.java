@@ -17,8 +17,6 @@ import javax.persistence.InheritanceType;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerator;
-
 /**
  * 数据父类
  * 
@@ -30,13 +28,13 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "plugin_report_data")
+@SequenceGenerator(name = "seq_plugin_report_data", sequenceName = "seq_plugin_report_data_id", allocationSize = 1)
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Data implements Serializable {
 
     private static final long serialVersionUID = -4261767148281294408L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "persistenceGenerator", strategy = "increment") 
+	@Id
+    @GeneratedValue(generator = "seq_plugin_report_data",strategy = GenerationType.SEQUENCE)
 	@Column(name = "id")
     private Long id;
 

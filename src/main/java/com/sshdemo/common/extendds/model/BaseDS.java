@@ -17,8 +17,6 @@ import javax.persistence.InheritanceType;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerator;
-
 /**
  * 数据源父类
  * 
@@ -33,14 +31,14 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "plugin_ds_base")
+@SequenceGenerator(name = "seq_plugin_ds_base", sequenceName = "seq_plugin_ds_base_id", allocationSize = 1)
 @Inheritance(strategy = InheritanceType.JOINED)
 public class BaseDS implements Serializable {
 
     private static final long serialVersionUID = 3846532575959285040L;
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "persistenceGenerator", strategy = "increment") 
+	@Id
+    @GeneratedValue(generator = "seq_plugin_ds_base",strategy = GenerationType.SEQUENCE)
 	@Column(name = "id")
     private Long id;
     @Column(name = "name", length = 50, unique = true, nullable = false)
