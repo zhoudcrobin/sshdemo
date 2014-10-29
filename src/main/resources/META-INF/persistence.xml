@@ -38,7 +38,7 @@
 		<class>com.sshdemo.common.schedule.model.JobSimpleTrigger</class>
 		<class>com.sshdemo.common.schedule.model.JobTrigger</class>
 		<properties>
-			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.archive.autodetection" value="false"/>
 			<property name="hibernate.transaction.auto_close_session" value="false"/>
 			<property name="hibernate.show_sql" value="false" />

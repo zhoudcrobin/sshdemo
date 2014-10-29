@@ -30,7 +30,7 @@
 		destroy-method="close">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
 		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/sshdemo" />
-		<property name="user" value="zhoudc" />
+		<property name="user" value="root" />
 		<property name="password" value="123456" />
 		<property name="initialPoolSize" value="5" />
 		<property name="minPoolSize" value="5" />
@@ -82,17 +82,16 @@
 		</tx:attributes>
 	</tx:advice>
 
-	<!--  
+
 	<aop:config>
 		<aop:pointcut id="serviceOperation"
-			expression="execution(* com.ewcms..*Service.*(..)) and !execution(* com.ewcms.security.acl..*Service.*(..))" />
+			expression="execution(* com.sshdemo.common..*Service.*(..)) and !execution(* com.sshdemo.common.security.acl..*Service.*(..))" />
 		<aop:pointcut id="aclServiceOperation"
-			expression="execution(* com.ewcms.security.acl..*Service.*(..))" />
+			expression="execution(* com.sshdemo.common.security.acl..*Service.*(..))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation" />
 		<aop:advisor advice-ref="aclTxAdvice" pointcut-ref="aclServiceOperation" />
-		<aop:advisor advice-ref="servertxAdvice" pointcut-ref="serverServiceOperation" />
 	</aop:config>
-	-->
+
 	<tx:annotation-driven transaction-manager="txManager" />
 	<bean id="cacheManager"
 		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
