@@ -10,10 +10,10 @@
 			$(function(){
 				$('#systemtab').tabs({
 					onSelect:function(title){
-						var jdbcurl="<s:url namespace='/ds/jdbc' action='index'/>";
-						var jndiurl="<s:url namespace='/ds/jndi' action='index'/>";
-						var beanurl="<s:url namespace='/ds/bean' action='index'/>";
-						var customurl="<s:url namespace='/ds/custom' action='index'/>";
+						var jdbcurl="<s:url namespace='/extendds/jdbc' action='index'/>";
+						var jndiurl="<s:url namespace='/extendds/jndi' action='index'/>";
+						var beanurl="<s:url namespace='/extendds/bean' action='index'/>";
+						var customurl="<s:url namespace='/extendds/custom' action='index'/>";
 						if(title=="JDBC数据源"){
 							$("#editjdbcifr").attr('src',jdbcurl);
 						}

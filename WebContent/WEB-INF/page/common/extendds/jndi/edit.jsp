@@ -14,7 +14,7 @@
         </script>		
 	</head>
 	<body>
-		<s:form action="save" namespace="/ds/jndi">
+		<s:form action="save" namespace="/extendds/jndi">
 			<table class="formtable" >
 				<tr>
 					<td>名称：</td>

@@ -9,10 +9,10 @@
 		<s:include value="../../../taglibs.jsp"/>
 		<script type="text/javascript" src='<s:url value="/ewcmssource/page/ds/index.js"/>'></script>
 		<script type="text/javascript">
-			connectTest = "<s:url namespace='/ds/connect' action='test'/>";
+			connectTest = "<s:url namespace='/extendds/connect' action='test'/>";
 			$(function(){
 				ewcmsBOBJ = new EwcmsBase();
-				ewcmsBOBJ.setQueryURL('<s:url namespace="/ds/custom" action="query"/>');
+				ewcmsBOBJ.setQueryURL('<s:url namespace="/extendds/custom" action="query"/>');
 	
 				ewcmsBOBJ.setWinWidth(700);
 				ewcmsBOBJ.setWinHeight(240);
@@ -34,8 +34,8 @@
 	
 				ewcmsOOBJ = new EwcmsOperate();
 				ewcmsOOBJ.setQueryURL(ewcmsBOBJ.getQueryURL());
-				ewcmsOOBJ.setInputURL('<s:url namespace="/ds/custom" action="input"/>');
-				ewcmsOOBJ.setDeleteURL('<s:url namespace="/ds/custom" action="delete"/>');
+				ewcmsOOBJ.setInputURL('<s:url namespace="/extendds/custom" action="input"/>');
+				ewcmsOOBJ.setDeleteURL('<s:url namespace="/extendds/custom" action="delete"/>');
 			});
 		</script>		
 	</head>

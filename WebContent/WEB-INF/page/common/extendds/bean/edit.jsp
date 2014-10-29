@@ -14,7 +14,7 @@
         </script>		
 	</head>
 	<body>
-		<s:form action="save" namespace="/ds/bean">
+		<s:form action="save" namespace="/extendds/bean">
 			<table class="formtable" >
 				<tr>
 					<td>名称：</td>

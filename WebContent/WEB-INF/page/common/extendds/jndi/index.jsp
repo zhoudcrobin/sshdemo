@@ -12,7 +12,7 @@
 			connectTest = "<s:url namespace='/ds/connect' action='test'/>";
 			$(function(){
 				ewcmsBOBJ = new EwcmsBase();
-				ewcmsBOBJ.setQueryURL('<s:url namespace="/ds/jndi" action="query"/>');
+				ewcmsBOBJ.setQueryURL('<s:url namespace="/extendds/jndi" action="query"/>');
 	
 				ewcmsBOBJ.setWinWidth(700);
 				ewcmsBOBJ.setWinHeight(210);
@@ -34,8 +34,8 @@
 	
 				ewcmsOOBJ = new EwcmsOperate();
 				ewcmsOOBJ.setQueryURL(ewcmsBOBJ.getQueryURL());
-				ewcmsOOBJ.setInputURL('<s:url namespace="/ds/jndi" action="input"/>');
-				ewcmsOOBJ.setDeleteURL('<s:url namespace="/ds/jndi" action="delete"/>');
+				ewcmsOOBJ.setInputURL('<s:url namespace="/extendds/jndi" action="input"/>');
+				ewcmsOOBJ.setDeleteURL('<s:url namespace="/extendds/jndi" action="delete"/>');
 			});
 		</script>		
 	</head>

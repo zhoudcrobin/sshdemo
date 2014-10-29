@@ -11,7 +11,7 @@
     <ewcms:datepickerhead/>
     <script type="text/javascript">
        $(function(){
-           <s:include value="../../alertMessage.jsp"/>
+           <s:include value="../../../alertMessage.jsp"/>
            var userEdit = new UserEdit({
               detailUrl:'<s:url action="detail"/>',
               hasNameUrl:'<s:url action="hasUsername"/>'

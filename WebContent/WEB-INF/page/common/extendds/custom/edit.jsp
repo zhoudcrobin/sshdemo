@@ -14,7 +14,7 @@
         </script>		
 	</head>
 	<body>
-		<s:form action="save" namespace="/ds/custom">
+		<s:form action="save" namespace="/extendds/custom">
 			<table class="formtable" >
 				<tr>
 					<td>名称：</td>

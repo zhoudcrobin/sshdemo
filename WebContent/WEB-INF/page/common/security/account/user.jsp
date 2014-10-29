@@ -6,11 +6,11 @@
 <html>
 <head>
     <title>修改用户信息</title>
-	<s:include value="../../taglibs.jsp"/>
+	<s:include value="../../../taglibs.jsp"/>
     <ewcms:datepickerhead/>
     <script type="text/javascript">
         $(function(){
-            <s:include value="../../alertMessage.jsp"/>
+            <s:include value="../../../alertMessage.jsp"/>
             parent.updateUsername('<s:property value="userInfo.name"/>');
         });
        

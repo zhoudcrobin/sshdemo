@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>用户组编辑</title>
-	<s:include value="../../taglibs.jsp"/>
+	<s:include value="../../../taglibs.jsp"/>
     <script type="text/javascript" src='<s:url value="/ewcmssource/page/security/group/edit.js"/>'></script>
     <script type="text/javascript">
        $(function(){

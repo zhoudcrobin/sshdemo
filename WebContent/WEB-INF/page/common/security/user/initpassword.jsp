@@ -10,7 +10,7 @@
     
     <script type="text/javascript">
         $(function(){
-            <s:include value="../../alertMessage.jsp"/>
+            <s:include value="../../../alertMessage.jsp"/>
             var initPassword = new InitPassword();
             initPassword.init();
         });

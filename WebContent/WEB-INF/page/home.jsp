@@ -132,7 +132,7 @@
                         </a>
                	    </div>
                	    <div class="nav-item">
-                         <a href="javascript:_home.addTab('数据源','ds/index.do')">
+                         <a href="javascript:_home.addTab('数据源','extendds/index.do')">
                             <img src="ewcmssource/image/report_ds.png" style="border:0"/><br/>
                             <span>数据源</span>
                         </a>
