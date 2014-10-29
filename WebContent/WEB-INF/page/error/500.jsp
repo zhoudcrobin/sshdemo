@@ -21,6 +21,6 @@
 </head>
 
 <body>
-<div><h1>系统发生内部错误.</h1></div>
+<div><h1><%=ex.getMessage() %></h1></div>
 </body>
 </html>
