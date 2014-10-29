@@ -4,7 +4,7 @@
 <html>
 <head>
 <title>用户明细</title>
-<s:include value="../../taglibs.jsp"/>
+<s:include value="../../../taglibs.jsp"/>
 <script type="text/javascript" src='<s:url value="/ewcmssource/page/security/user/detail.js"/>'></script>
 
 <script type="text/javascript">

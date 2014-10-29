@@ -6,7 +6,7 @@
 <html>
 <head>
     <title>用户编辑</title>
-	<s:include value="../../taglibs.jsp"/>
+	<s:include value="../../../taglibs.jsp"/>
     <script type="text/javascript" src='<s:url value="/ewcmssource/page/security/user/edit.js"/>'></script>
     <ewcms:datepickerhead/>
     <script type="text/javascript">
