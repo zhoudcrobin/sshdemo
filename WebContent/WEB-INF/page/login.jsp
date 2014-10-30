@@ -12,7 +12,7 @@
         }
     </script>
     <head>
-        <title>Ewcms用户登录</title>
+        <title>sshdemo--用户登录</title>
         <script type="text/javascript" src='<s:url value="/ewcmssource/js/jquery.min.js"/>'></script>
         <script type="text/javascript" src='<s:url value="/ewcmssource/page/login.js"/>'></script>
         <!-- <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/page/login.css"/>'/>-->

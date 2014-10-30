@@ -23,7 +23,7 @@
 		class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 		<property name="showSql" value="false" />
 		<property name="generateDdl" value="false" />
-		<property name="database" value="MYSQL"/>
+		<property name="database" value="POSTGRESQL"/>
 	</bean>
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"

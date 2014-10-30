@@ -30,26 +30,31 @@
     <body class="easyui-layout">
         <div region="north" split="true" class="head">
         	<table width="100%">
-        		<tr>
-        			<td width="50%" style="text-align: left"><img src='<s:url value="/ewcmssource/image/top_bg_ewcms.gif"/>' height="35px" border="0" style="border:0;padding-left:4px;padding-top:13px;"/> | sshdemo</td>
+        		<tr style="background:url('<s:url value="/ewcmssource/image/topbg.gif"/>');">
+        			<td width="50%" style="text-align: left;"><font style="FONT-SIZE: 40px;color:white">  sshdemo 框架演示</font></td>
         			<td width="50%">
         				<table width="100%">
         					<tr>
-        						<td height="20px" colspan="2" valign="bottom">
+			        			<td height="30px" width="97%" style="text-align: right"><span style="font-size:13px;font-weight: bold;color:white;">标签1|标签2|<s:property value="realName"/> </span></td>
+        						<td width="2%"><a id="button-main" href="#" style="border:0;padding:0;"><img src="<s:url value='/ewcmssource/image/exit.png'/>" width="17" height="17" style="border:0;"/></a></td>
+        						<td width="1%"></td>
+        					</tr>
+        					<tr>
+        						<td height="20px" colspan="2" >
         							<table width="100%">
         								<tr>
-        									<td width="65%" style="text-align:right;">
-			        							<span id="tipMessage" style="color:red;font-size:13px;"></span>
+        									<td width="45%" style="text-align:right;">
+			        							
 			        						</td>
-			        						<td width="35%" style="text-align:left">
-			        							<div class="bs">
-													<a class="styleswitch a1" style="cursor: pointer" title="谈黄色" rel="sunny"></a>
-													<a class="styleswitch a2" style="cursor: pointer" title="浅蓝色" rel="cupertino"></a>
+			        						<td width="55%" style="text-align:right">
+			        							<div >
+													<a class="styleswitch a1" style="cursor: pointer" title="黄色" rel="sunny"></a>
+													<a class="styleswitch a2" style="cursor: pointer" title="蓝色" rel="default"></a>	
 													<a class="styleswitch a4" style="cursor: pointer" title="黑色" rel="dark-hive"></a>	
 													<a class="styleswitch a5" style="cursor: pointer" title="灰色" rel="pepper-grinder"></a>		
 												</div>
+												<span style="color:white" id="clock"/>
 			        						</td>
-			        						<td><s:property value="realName"/><a id="button-main" href="#" style="border:0;padding:0;"><img src="<s:url value='/ewcmssource/image/exit.png'/>" width="17" height="17" style="border:0;"/></a></td>
 			        					</tr>
 			        				</table>
 			        			</td>
@@ -67,7 +72,6 @@
         </div>
         <div region="south" split="true" style="height:2px;background:#efefef;overflow:hidden;"></div>
         <div region="west" split="true" title="EWCMS平台菜单" style="width:180px;padding:1px;overflow:hidden;">
-            <sec:authorize ifAnyGranted="ROLE_ADMIN">
               <div id="mainmenu" class="easyui-accordion" fit="true" border="false">
                 <div title="任务计划" style="overflow:auto;">
                 	 <div class="nav-item">
@@ -129,14 +133,13 @@
                         </a>
                	    </div>
                	    <div class="nav-item">
-                         <a href="javascript:_home.addTab('数据源','extendds/index.do')">
+                         <a href="javascript:_home.addTab('数据源','ds/index.do')">
                             <img src="ewcmssource/image/report_ds.png" style="border:0"/><br/>
                             <span>数据源</span>
                         </a>
                	    </div>
                	</div>
             </div>
-             </sec:authorize>
         </div>
         <div region="center" style="overflow:hidden;">
             <div class="easyui-tabs" id="systemtab" fit="true" border="false">
