@@ -6,10 +6,10 @@
 <html>
 	<head>
 		<title>custom数据源设置</title>
-		<s:include value="../../../taglibs.jsp"/>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
         <script type="text/javascript">
 	        $(function(){
-	            <s:include value="../../../alertMessage.jsp"/>
+	        	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
 	        });
         </script>		
 	</head>

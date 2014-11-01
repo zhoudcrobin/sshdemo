@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>权限</title>
-	<s:include value="../../../taglibs.jsp"/>
+	<jsp:include page='/comresource/inifile/pageresource.jsp'/>
     <script type="text/javascript">
         $(function(){
             $('#tt').datagrid({

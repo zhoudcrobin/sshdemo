@@ -6,8 +6,8 @@
 <html>
 	<head>
 		<title>jndi数据源</title>	
-		<s:include value="../../../taglibs.jsp"/>
-		<script type="text/javascript" src='<s:url value="/ewcmssource/js/extendds.js"/>'></script>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
+		<script type="text/javascript" src='<s:url value="/comresource/js/extendds.js"/>'></script>
 		<script type="text/javascript">
 			connectTest = "<s:url namespace='/ds/connect' action='test'/>";
 			$(function(){
@@ -26,7 +26,7 @@
 			                {field:'remarks',title:'说明',width:300},
 			                {field:'connectTest',title:'测试',width:30,
 			                	formatter : function(val, rec) {
-			                		return "&nbsp;<a href='javascript:void(0);' onclick='test(" +  rec.id + ");'><img src='../../ewcmssource/image/ds/connect_test.png' width='13px' height='13px' title='测试' style='border:0'/></a>";
+			                		return "&nbsp;<a href='javascript:void(0);' onclick='test(" +  rec.id + ");'><img src=<s:url value='/comresource/image/ds/connect_test.png'/> width='13px' height='13px' title='测试' style='border:0'/></a>";
 			                	}
 			                }
 	                  ]]

@@ -6,14 +6,14 @@
 <html>
     <head>
         <title>sshdemo</title>
-        <s:include value="taglibs.jsp"/>
-        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/css/home.css"/>'/>
-        <script type="text/javascript" src='<s:url value="/ewcmssource/js/home.js"/>'></script>
-        <script type="text/javascript" src='<s:url value="/ewcmssource/easyui/skin/skin.js"/>'></script>
-        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/easyui/themes/dark-hive/easyui.css"/>' title="dark-hive"/>
-        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/easyui/themes/cupertino/easyui.css"/>' title="cupertino"/>
-        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/easyui/themes/pepper-grinder/easyui.css"/>'  title="pepper-grinder"/>
-        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/easyui/themes/sunny/easyui.css"/>' title="sunny"/>
+        <jsp:include page='/comresource/inifile/pageresource.jsp'/>
+        <link rel="stylesheet" type="text/css" href='<s:url value="/comresource/css/home.css"/>'/>
+        <script type="text/javascript" src='<s:url value="/comresource/js/home.js"/>'></script>
+        <script type="text/javascript" src='<s:url value="/comresource/easyui/skin/skin.js"/>'></script>
+        <link rel="stylesheet" type="text/css" href='<s:url value="/comresource/easyui/themes/dark-hive/easyui.css"/>' title="dark-hive"/>
+        <link rel="stylesheet" type="text/css" href='<s:url value="/comresource/easyui/themes/cupertino/easyui.css"/>' title="cupertino"/>
+        <link rel="stylesheet" type="text/css" href='<s:url value="/comresource/easyui/themes/pepper-grinder/easyui.css"/>'  title="pepper-grinder"/>
+        <link rel="stylesheet" type="text/css" href='<s:url value="/comresource/easyui/themes/sunny/easyui.css"/>' title="sunny"/>
         <script type="text/javascript">
             var _home = new home();
             $(function(){
@@ -34,13 +34,13 @@
     <body class="easyui-layout">
         <div region="north" split="true" class="head">
         	<table width="100%">
-        		<tr style="background:url('<s:url value="/ewcmssource/image/topbg.gif"/>');">
+        		<tr style="background:url('<s:url value="/comresource/image/topbg.gif"/>');">
         			<td width="50%" style="text-align: left;"><font style="FONT-SIZE: 40px;color:white">  sshdemo 框架演示</font></td>
         			<td width="50%">
         				<table width="100%">
         					<tr>
 			        			<td height="30px" width="97%" style="text-align: right"><span style="font-size:13px;font-weight: bold;color:white;">标签1|标签2|标签3|<s:property value="realName"/> </span></td>
-        						<td width="2%"><a id="button-main" href="#" style="border:0;padding:0;"><img src="<s:url value='/ewcmssource/image/exit.png'/>" width="17" height="17" style="border:0;"/></a></td>
+        						<td width="2%"><a id="button-main" href="#" style="border:0;padding:0;"><img src="<s:url value='/comresource/image/exit.png'/>" width="17" height="17" style="border:0;"/></a></td>
         						<td width="1%"></td>
         					</tr>
         					<tr>
@@ -75,16 +75,54 @@
         <div region="south" split="true" style="height:2px;background:#efefef;overflow:hidden;"></div>
         <div region="west" split="true" title="EWCMS平台菜单" style="width:180px;padding:1px;overflow:hidden;">
               <div id="mainmenu" class="easyui-accordion" fit="true" border="false">
+               	<div title="报表管理" style="overflow:auto;">
+               	    <div class="nav-item">
+                         <a href="javascript:_home.addTab('文字报表','report/text/index.do')">
+                            <img src="comresource/image/report_text.png" style="border:0"/><br/>
+                            <span>文字报表</span>
+                        </a>
+               	    </div>
+               	    <div class="nav-item">
+                         <a href="javascript:_home.addTab('图型报表','report/chart/index.do')">
+                            <img src="comresource/image/report_chart.png" style="border:0"/><br/>
+                            <span>图型报表</span>
+                        </a>
+               	    </div>
+               	    <div class="nav-item">
+                         <a href="javascript:_home.addTab('报表分类','report/category/index.do')">
+                            <img src="comresource/image/report_category.png" style="border:0"/><br/>
+                            <span>报表分类</span>
+                        </a>
+               	    </div>
+               	    <div class="nav-item">
+                         <a href="javascript:_home.addTab('报表存储','report/repository/index.do')">
+                            <img src="comresource/image/report_repository.png" style="border:0"/><br/>
+                            <span>报表存储</span>
+                        </a>
+               	    </div>
+               	    <div class="nav-item">
+                         <a href="javascript:_home.addTab('数据源','extendds/index.do')">
+                            <img src="comresource/image/report_ds.png" style="border:0"/><br/>
+                            <span>数据源</span>
+                        </a>
+               	    </div>
+               	    <div class="nav-item">
+                         <a href="javascript:_home.addTab('报表制作','report/show/index.do')">
+                            <img src="comresource/image/report_text.png" style="border:0"/><br/>
+                            <span>报表制作</span>
+                        </a>
+               	    </div>    
+               	</div>              
                 <div title="任务计划" style="overflow:auto;">
                 	 <div class="nav-item">
-                        <a href="javascript:_home.addTab('任务设置','scheduling/jobinfo/index.do')"> 
-                            <img src="ewcmssource/image/scheduling_job.png" style="border: 0" /><br/>
+                        <a href="javascript:_home.addTab('任务设置','schedule/jobinfo/index.do')"> 
+                            <img src="comresource/image/scheduling_job.png" style="border: 0" /><br/>
                             <span>任务设置</span>
                          </a>
                     </div>
                     <div class="nav-item">
-                        <a  href="javascript:_home.addTab('作业设置','scheduling/jobclass/index.do')"> 
-                             <img src="ewcmssource/image/scheduling_jobclass.png" style="border: 0" /><br/>
+                        <a  href="javascript:_home.addTab('作业设置','schedule/jobclass/index.do')"> 
+                             <img src="comresource/image/scheduling_jobclass.png" style="border: 0" /><br/>
                              <span>作业设置</span>
                         </a>
                     </div>
@@ -92,61 +130,29 @@
                 <div title="权限管理" style="overflow:auto;">
                    <div class="nav-item">
                         <a href="javascript:_home.addTab('权限列表','security/authority/index.do')">
-                            <img src="ewcmssource/image/role.png" style="border:0;"/><br/>
+                            <img src="comresource/image/role.png" style="border:0;"/><br/>
                             <span>权限列表</span>
                         </a>
                    </div>
                    <div class="nav-item">
                        <a href="javascript:_home.addTab('用户组管理','security/group/index.do')">
-                            <img src="ewcmssource/image/group.png" style="border:0;"/><br/>
+                            <img src="comresource/image/group.png" style="border:0;"/><br/>
                             <span>用户组管理</span>
                         </a>
                    </div>
                    <div class="nav-item">
                        <a href="javascript:_home.addTab('用户管理','security/user/index.do')">
-                            <img src="ewcmssource/image/user.png" style="border:0;"/><br/>
+                            <img src="comresource/image/user.png" style="border:0;"/><br/>
                             <span>用户管理</span>
                         </a>
                     </div>
                 </div>     
-               	<div title="报表管理" style="overflow:auto;">
-               	    <div class="nav-item">
-                         <a href="javascript:_home.addTab('文字报表','report/text/index.do')">
-                            <img src="ewcmssource/image/report_text.png" style="border:0"/><br/>
-                            <span>文字报表</span>
-                        </a>
-               	    </div>
-               	    <div class="nav-item">
-                         <a href="javascript:_home.addTab('图型报表','report/chart/index.do')">
-                            <img src="ewcmssource/image/report_chart.png" style="border:0"/><br/>
-                            <span>图型报表</span>
-                        </a>
-               	    </div>
-               	    <div class="nav-item">
-                         <a href="javascript:_home.addTab('报表分类','report/category/index.do')">
-                            <img src="ewcmssource/image/report_category.png" style="border:0"/><br/>
-                            <span>报表分类</span>
-                        </a>
-               	    </div>
-               	    <div class="nav-item">
-                         <a href="javascript:_home.addTab('报表存储','report/repository/index.do')">
-                            <img src="ewcmssource/image/report_repository.png" style="border:0"/><br/>
-                            <span>报表存储</span>
-                        </a>
-               	    </div>
-               	    <div class="nav-item">
-                         <a href="javascript:_home.addTab('数据源','extendds/index.do')">
-                            <img src="ewcmssource/image/report_ds.png" style="border:0"/><br/>
-                            <span>数据源</span>
-                        </a>
-               	    </div>
-               	</div>
             </div>
         </div>
         <div region="center" style="overflow:hidden;">
             <div class="easyui-tabs" id="systemtab" fit="true" border="false">
                 <div title="首页" style="padding:5px;overflow:hidden;">
-                    sshdemo
+                  <center><h1> 欢迎试用本系统!</h1> </center>
                 </div>
             </div>
         </div>

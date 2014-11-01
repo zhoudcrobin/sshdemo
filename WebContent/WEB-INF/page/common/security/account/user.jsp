@@ -2,15 +2,15 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
-<%@taglib prefix="ewcms" uri="/ewcms-tags"%>
+<%@taglib prefix="self" uri="/self-tags"%>
 <html>
 <head>
     <title>修改用户信息</title>
-	<s:include value="../../../taglibs.jsp"/>
-    <ewcms:datepickerhead/>
+	<jsp:include page='/comresource/inifile/pageresource.jsp'/>
+    <self:datepickerhead/>
     <script type="text/javascript">
         $(function(){
-            <s:include value="../../../alertMessage.jsp"/>
+        	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
             parent.updateUsername('<s:property value="userInfo.name"/>');
         });
        

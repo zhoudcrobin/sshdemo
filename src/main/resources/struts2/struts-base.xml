@@ -13,7 +13,7 @@
             <result>/WEB-INF/page/login.jsp</result>
         </action>
         <action name="accessDenied" class="com.sshdemo.common.web.AccessDeniedAction">
-            <result>/WEB-INF/page/accessDenied.jsp</result>
+            <result>/WEB-INF/page/error/accessDenied.jsp</result>
         </action>
     </package>
 </struts>

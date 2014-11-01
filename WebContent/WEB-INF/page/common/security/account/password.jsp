@@ -5,12 +5,12 @@
 <html>
     <head>
         <title>修改密码</title>
-		<s:include value="../../../taglibs.jsp"/>
-        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/css/password.css"/>'/>
-        <script type="text/javascript" src='<s:url value="/ewcmssource/js/account/digitialspaghetti.password.min.js"/>'></script>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
+        <link rel="stylesheet" type="text/css" href='<s:url value="/comresource/css/password.css"/>'/>
+        <script type="text/javascript" src='<s:url value="/comresource/js/account/digitialspaghetti.password.min.js"/>'></script>
         <script type="text/javascript">
             $(function(){
-                <s:include value="../../../alertMessage.jsp"/>
+            	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
                 $('input[name=password]').pstrength({
                     'displayMinChar': false,
                     'minChar': 6,

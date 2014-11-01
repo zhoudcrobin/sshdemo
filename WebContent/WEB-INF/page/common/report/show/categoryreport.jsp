@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<title>报表集</title>
-		<s:include value="../../../taglibs.jsp"/>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
 		<script type="text/javascript">
 			$(function(){
 				ewcmsBOBJ = new EwcmsBase();

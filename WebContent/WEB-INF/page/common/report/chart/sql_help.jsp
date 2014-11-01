@@ -6,7 +6,6 @@
 <html>
 	<head>
 		<title>SQL语句使用参数说明</title>
-		<s:include value="../../../taglibs.jsp"/>
 	</head>
 	<body>
 		<font color="#0066FF"><b>SQL语句使用方式</b></font><p/>

@@ -6,12 +6,12 @@
 <html>
 	<head>
 		<title>报表选择</title>
-		<s:include value="../../../../taglibs.jsp"/>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
         <script type="text/javascript">
             var textCategoryURL = "<s:url namespace='/report/text' action='findTextReport'/>?categoryId=<s:property value='categoryId'/>";
             var chartCategoryURL = "<s:url namespace='/report/chart' action='findChartReport'/>?categoryId=<s:property value='categoryId'/>";
 	        $(function(){
-	            <s:include value="../../../../alertMessage.jsp"/>
+	        	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
 	        	$('#text_categories').combobox({
 	        		url: textCategoryURL,
 	        		valueField:'id',

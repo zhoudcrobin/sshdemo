@@ -6,15 +6,15 @@
 <html>
 	<head>
 		<title>调度器任务执行类</title>
-		<s:include value="../../../taglibs.jsp"/>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
         <script type="text/javascript">
 	        $(function(){
-	            <s:include value="../../../alertMessage.jsp"/>
+	        	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
 	        });
         </script>		
 	</head>
 	<body>
-		<s:form action="save" namespace="/scheduling/jobclass">
+		<s:form action="save" namespace="/schedule/jobclass">
 			<table class="formtable" >
 				<tr>
 					<td>名称：</td>

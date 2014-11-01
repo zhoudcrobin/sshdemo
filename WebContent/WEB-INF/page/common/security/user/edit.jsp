@@ -2,16 +2,16 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
-<%@taglib prefix="ewcms" uri="/ewcms-tags"%>
+<%@taglib prefix="self" uri="/self-tags"%>
 <html>
 <head>
     <title>用户编辑</title>
-	<s:include value="../../../taglibs.jsp"/>
-    <script type="text/javascript" src='<s:url value="/ewcmssource/js/user/edit.js"/>'></script>
-    <ewcms:datepickerhead/>
+	<jsp:include page='/comresource/inifile/pageresource.jsp'/>
+    <script type="text/javascript" src='<s:url value="/comresource/js/user/edit.js"/>'></script>
+    <self:datepickerhead/>
     <script type="text/javascript">
        $(function(){
-           <s:include value="../../../alertMessage.jsp"/>
+    	   <jsp:include page='/comresource/inifile/alertmessage.jsp'/>
            var userEdit = new UserEdit({
               detailUrl:'<s:url action="detail"/>',
               hasNameUrl:'<s:url action="hasUsername"/>'
@@ -54,14 +54,14 @@
                            <tr>
                                <td width="120px">授权开始时间：</td>
                                <td class="formFieldError">
-                                   <ewcms:datepicker id="accountStartid" name="user.accountStart"  option="inputsimple" format="yyyy-MM-dd HH:mm:ss"/>
+                                   <self:datepicker id="accountStartid" name="user.accountStart"  option="inputsimple" format="yyyy-MM-dd HH:mm:ss"/>
                                    <s:fielderror ><s:param value="%{'user.accountStart'}"/></s:fielderror>
                                </td>
                            </tr>
                            <tr>
                                <td width="120px">授权结束时间：</td>
                                <td class="formFieldError">
-                                   <ewcms:datepicker id="accountEndid" name="user.accountEnd" option="inputsimple" format="yyyy-MM-dd HH:mm:ss"/>
+                                   <self:datepicker id="accountEndid" name="user.accountEnd" option="inputsimple" format="yyyy-MM-dd HH:mm:ss"/>
                                    <s:fielderror ><s:param value="%{'user.accountEnd'}"/></s:fielderror>
                                </td>
                            </tr>
@@ -91,7 +91,7 @@
                            <tr>
                                <td width="120px">生日：</td>
                                <td class="formFieldError">
-                                   <ewcms:datepicker id="accountStartid" name="user.userInfo.birthday" option="inputsimple" format="yyyy-MM-dd"/>
+                                   <self:datepicker id="accountStartid" name="user.userInfo.birthday" option="inputsimple" format="yyyy-MM-dd"/>
                                    <s:fielderror ><s:param value="%{'user.userInfo.birthday'}"/></s:fielderror>
                                </td>
                            </tr>

@@ -4,8 +4,8 @@
 <html>
 <head>
 <title>用户明细</title>
-<s:include value="../../../taglibs.jsp"/>
-<script type="text/javascript" src='<s:url value="/ewcmssource/js/user/detail.js"/>'></script>
+<jsp:include page='/comresource/inifile/pageresource.jsp'/>
+<script type="text/javascript" src='<s:url value="/comresource/js/user/detail.js"/>'></script>
 
 <script type="text/javascript">
     $(function() {

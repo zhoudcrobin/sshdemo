@@ -13,9 +13,9 @@
     </script>
     <head>
         <title>sshdemo--用户登录</title>
-        <script type="text/javascript" src='<s:url value="/ewcmssource/js/jquery.min.js"/>'></script>
-        <script type="text/javascript" src='<s:url value="/ewcmssource/js/login.js"/>'></script>
-        <link href='<s:url value="/ewcmssource/css/login.css"/>'  type="text/css" rel="stylesheet"/>
+        <script type="text/javascript" src='<s:url value="/comresource/easyui/jquery.min.js"/>'></script>
+        <script type="text/javascript" src='<s:url value="/comresource/js/login.js"/>'></script>
+        <link href='<s:url value="/comresource/css/login.css"/>'  type="text/css" rel="stylesheet"/>
         <script type="text/javascript">
             $(function() {
                 var _login = new login('<s:url value = "/checkcode.jpg"/>');
@@ -91,7 +91,7 @@
 			        		</div>
 			        	</li>
 			    		<li class="user_main_r">
-			    			<img class="ibtnentercssclass" id="ibtnenter" style="cursor:pointer; 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px"  src='<s:url value="/ewcmssource/image/login/user_botton.gif"/>' name="ibtnenter" onclick="document.forms[0].submit();"/> 
+			    			<img class="ibtnentercssclass" id="ibtnenter" style="cursor:pointer; 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px"  src='<s:url value="/comresource/image/login/user_botton.gif"/>' name="ibtnenter" onclick="document.forms[0].submit();"/> 
 			    		</li>
 			    	</ul>
 		    	</dd>

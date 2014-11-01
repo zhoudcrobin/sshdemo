@@ -6,11 +6,11 @@
 <html>
 	<head>
 		<title>作业设置</title>	
-		<s:include value="../../../taglibs.jsp"/>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
 		<script type="text/javascript">
 		$(function(){
 			ewcmsBOBJ = new EwcmsBase();
-			ewcmsBOBJ.setQueryURL('<s:url namespace="/scheduling/jobinfo" action="query"/>');
+			ewcmsBOBJ.setQueryURL('<s:url namespace="/schedule/jobinfo" action="query"/>');
 
 			ewcmsBOBJ.setWinWidth(1040);
 			ewcmsBOBJ.setWinHeight(470);
@@ -34,9 +34,9 @@
 		                 		formatter:function(val,rec){
 		                 			var button_html = "";
 		                 			if (rec.state=='正常'){
-			                 			button_html = "<a href='<s:url namespace='/scheduling/jobinfo' action='pause'/>?jobId=" + rec.id + "'><img src='../../ewcmssource/image/scheduling/pause.png' width='13px' height='13px' title='暂停操作'/></a>";
+			                 			button_html = "<a href='<s:url namespace='/schedule/jobinfo' action='pause'/>?jobId=" + rec.id + "'><img src=<s:url value='/comresource/image/scheduling/pause.png'/> width='13px' height='13px' title='暂停操作'/></a>";
 		                 			}else if (rec.state=='暂停'){
-			                 			button_html = "<a href='<s:url namespace='/scheduling/jobinfo' action='resumed'/>?jobId=" + rec.id + "'><img src='../../ewcmssource/image/scheduling/resumed.png' width='13px' height='13px' title='恢复操作'/></a>";
+			                 			button_html = "<a href='<s:url namespace='/schedule/jobinfo' action='resumed'/>?jobId=" + rec.id + "'><img src=<s:url value='/ewcmssource/image/scheduling/resumed.png'/> width='13px' height='13px' title='恢复操作'/></a>";
 		                 			}
 		                 			return button_html;
 		                 		}
@@ -46,8 +46,8 @@
 
 			ewcmsOOBJ = new EwcmsOperate();
 			ewcmsOOBJ.setQueryURL(ewcmsBOBJ.getQueryURL());
-			ewcmsOOBJ.setInputURL('<s:url namespace="/scheduling/jobinfo" action="input"/>');
-			ewcmsOOBJ.setDeleteURL('<s:url namespace="/scheduling/jobinfo" action="delete"/>');
+			ewcmsOOBJ.setInputURL('<s:url namespace="/schedule/jobinfo" action="input"/>');
+			ewcmsOOBJ.setDeleteURL('<s:url namespace="/schedule/jobinfo" action="delete"/>');
 		});
 		</script>		
 	</head>

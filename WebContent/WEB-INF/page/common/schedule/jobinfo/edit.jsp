@@ -2,23 +2,23 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ page pageEncoding="UTF-8" %> 
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%@ taglib prefix="ewcms" uri="/ewcms-tags"%>
+<%@ taglib prefix="self" uri="/self-tags"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <html>
 	<head>
 		<title>调度器任务</title>
-		<s:include value="../../../taglibs.jsp"/>
-		<script type="text/javascript" src='<s:url value="/ewcmssource/js/jobinfo.js"/>'></script>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
+		<script type="text/javascript" src='<s:url value="/comresource/js/jobinfo.js"/>'></script>
         <script type="text/javascript">
 	        $(function(){
-	            <s:include value="../../../alertMessage.jsp"/>
+	        	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
 	        });
         </script>	
-        <ewcms:datepickerhead></ewcms:datepickerhead>	
+        <self:datepickerhead/>
 	</head>
 	<body>
-		<s:form action="save" namespace="/scheduling/jobinfo">
+		<s:form action="save" namespace="/schedule/jobinfo">
 			<table class="formtable" align="center">
 				<tr>
 					<td colspan="4" align="left"><font color="#0066FF"><b>任务信息</b></font></td>
@@ -85,7 +85,7 @@
 						<s:hidden name="%{enName}"/>
 					  </s:if>		
 					  <s:if test='type.name().equals("DATE")'>
-						<ewcms:datepicker name="%{enName}" value="%{defaultValue}"/>
+						<self:datepicker name="%{enName}" value="%{defaultValue}"/>
 					  </s:if>		
 					</td>
 				  </tr>
@@ -113,7 +113,7 @@
 						<s:radio id="start_" name="pageDisplayVo.start" list='#{1:"&nbsp;立刻执行"}' cssStyle="vertical-align: middle;"></s:radio> 
 						<s:radio id="start_" name="pageDisplayVo.start" list='#{2:"&nbsp;在"}' value="2" cssStyle="vertical-align: middle;"></s:radio>
 						 -->
-						<ewcms:datepicker id="startDate" name="pageDisplayVo.startDate" option="inputsimple" format="yyyy-MM-dd HH:mm" disabled="false" cssClass="inputtext"/>
+						<self:datepicker id="startDate" name="pageDisplayVo.startDate" option="inputsimple" format="yyyy-MM-dd HH:mm" disabled="false" cssClass="inputtext"/>
 						<s:fielderror><s:param value="%{'pageDisplayVo.startDate'}" /></s:fielderror><font color="red">&nbsp;&nbsp;*</font>
 					</td>
 				</tr>
@@ -134,7 +134,7 @@
 								<td colspan="3">
 									<s:radio id="occur"	name="pageDisplayVo.occur" list='#{1:"&nbsp;无限期&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"}' cssStyle="vertical-align: middle;"></s:radio>
 									<s:radio id="occur" name="pageDisplayVo.occur" list='#{2:"&nbsp;结束时间&nbsp;"}' cssStyle="vertical-align: middle;"></s:radio>
-									<label for="occur2"><ewcms:datepicker name="pageDisplayVo.endDateSimple" option="inputsimple" format="yyyy-MM-dd HH:mm"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+									<label for="occur2"><self:datepicker name="pageDisplayVo.endDateSimple" option="inputsimple" format="yyyy-MM-dd HH:mm"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
 									<s:radio id="occur" name="pageDisplayVo.occur" list='#{3:"&nbsp;"}' cssStyle="vertical-align: middle;"></s:radio>
 									<s:textfield id="occurrenceCount" name="pageDisplayVo.occurrenceCount" size="4" onkeyup="this.value=this.value.replace(/\D/g,'');"></s:textfield>&nbsp;次数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								</td>
@@ -156,7 +156,7 @@
 							<tr>
 								<td>结束时间：</td>
 								<td colspan="3">
-									<ewcms:datepicker id="endDateCalendar" name="pageDisplayVo.endDateCalendar" option="inputsimple" format="yyyy-MM-dd HH:mm" />
+									<self:datepicker id="endDateCalendar" name="pageDisplayVo.endDateCalendar" option="inputsimple" format="yyyy-MM-dd HH:mm" />
 								</td>
 							</tr>
 							<tr>

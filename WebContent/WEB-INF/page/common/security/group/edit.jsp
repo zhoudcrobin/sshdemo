@@ -5,11 +5,11 @@
 <html>
 <head>
     <title>用户组编辑</title>
-	<s:include value="../../../taglibs.jsp"/>
-    <script type="text/javascript" src='<s:url value="/ewcmssource/js/group/edit.js"/>'></script>
+	<jsp:include page='/comresource/inifile/pageresource.jsp'/>
+    <script type="text/javascript" src='<s:url value="/comresource/js/group/edit.js"/>'></script>
     <script type="text/javascript">
        $(function(){
-           <s:include value="../../../alertMessage.jsp"/>
+    	   <jsp:include page='/comresource/inifile/alertmessage.jsp'/>
            var groupEdit = new GroupEdit({
               detailUrl:'<s:url action="detail"/>',
               hasNameUrl:'<s:url action="hasGroupname"/>'

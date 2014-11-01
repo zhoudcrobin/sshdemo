@@ -6,8 +6,8 @@
 <html>
 	<head>
 		<title>图型报表</title>	
-		<s:include value="../../../taglibs.jsp"/>
-		<script type="text/javascript" src="<s:url value='/ewcmssource/easyui/ext/datagrid-detailview.js'/>"></script>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
+		<script type="text/javascript" src="<s:url value='/comresource/easyui/ext/datagrid-detailview.js'/>"></script>
 		<script type="text/javascript">
 			var parameterURL = "<s:url namespace='/report/category/detail' action='index'/>";
 			$(function(){

@@ -5,12 +5,12 @@
 <html>
 <head>
  <title>初始用户密码</title>
-	<s:include value="../../../taglibs.jsp"/>
-    <script type="text/javascript" src='<s:url value="/ewcmssource/js/user/initpassword.js"/>'></script>
+	<jsp:include page='/comresource/inifile/pageresource.jsp'/>
+    <script type="text/javascript" src='<s:url value="/comresource/js/user/initpassword.js"/>'></script>
     
     <script type="text/javascript">
         $(function(){
-            <s:include value="../../../alertMessage.jsp"/>
+        	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
             var initPassword = new InitPassword();
             initPassword.init();
         });

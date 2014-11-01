@@ -6,8 +6,8 @@
 <html>
 	<head>
 		<title>文字报表</title>	
-		<s:include value="../../../taglibs.jsp"/>
-		<script type="text/javascript" src="<s:url value='/ewcmssource/easyui/ext/datagrid-detailview.js'/>"></script>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
+		<script type="text/javascript" src="<s:url value='/comresource/easyui/ext/datagrid-detailview.js'/>"></script>
 		<script type="text/javascript">
 			var parameterURL = "<s:url namespace='/report/parameter' action='index'/>";
 			var schedulingURL = "<s:url namespace='/scheduling/jobreport' action='index'/>";
@@ -40,7 +40,7 @@
 			                {field:'remarks',title:'说明',width:400},
 			                {field:'download',title:'下载',width:30,
 			                	formatter:function(val,rec){
-			                		return "&nbsp;<a href='javascript:void(0);' onclick='download(" +  rec.id + ");'><img src='../../ewcmssource/css/icons/download.png' width='13px' height='13px' title='下载' style='border:0'/></a>";
+			                		return "&nbsp;<a href='javascript:void(0);' onclick='download(" +  rec.id + ");'><img src=<s:url value='/comresource/css/icons/download.png'/> width='13px' height='13px' title='下载' style='border:0'/></a>";
 			                	}
 			                }
 	                ]]

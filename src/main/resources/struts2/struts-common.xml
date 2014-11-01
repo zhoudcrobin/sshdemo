@@ -171,7 +171,7 @@
     </package>	
     
 	<!--  schedule -->
-		<package name="scheduling.jobclass" extends="struts-default" namespace="/scheduling/jobclass">
+		<package name="schedule.jobclass" extends="struts-default" namespace="/schedule/jobclass">
 		<action name="index">
 			<result>/WEB-INF/page/common/schedule/jobclass/index.jsp</result>
 		</action>
@@ -185,7 +185,7 @@
 			<result name="input">/WEB-INF/page/common/schedule/jobclass/edit.jsp</result>
 		</action>
 	</package>
-	<package name="scheduling.jobinfo" extends="struts-default" namespace="/scheduling/jobinfo">
+	<package name="schedule.jobinfo" extends="struts-default" namespace="/schedule/jobinfo">
 		<action name="index">
 			<result>/WEB-INF/page/common/schedule/jobinfo/index.jsp</result>
 		</action>
@@ -208,7 +208,7 @@
 		<action name="allJobClassList" class="com.ewcms.web.action.scheduling.job.JobAction" method="getAllJobClassList"/>
 		 -->
 	</package>
-	<package name="scheduling.jobchannel" extends="struts-default" namespace="/scheduling/jobchannel">
+	<package name="schedule.jobchannel" extends="struts-default" namespace="/schedule/jobchannel">
 		<action name="index" class="com.sshdemo.common.schedule.manage.web.JobChannelAction" method="getJobChannel">
 			<result name="input">/WEB-INF/page/common/schedule/jobinfo/edit_channel.jsp</result>
 		</action>
@@ -217,7 +217,7 @@
 			<result name="input">/WEB-INF/page/common/schedule/jobinfo/edit_channel.jsp</result>
 		</action>
 	</package>
-	<package name="scheduling.jobcrawler" extends="struts-default" namespace="/scheduling/jobcrawler">
+	<package name="schedule.jobcrawler" extends="struts-default" namespace="/schedule/jobcrawler">
 		<action name="index" class="com.sshdemo.common.schedule.manage.web.JobCrawlerAction" method="getJobCrawler">
 			<result name="input">/WEB-INF/page/common/schedule/jobinfo/edit_crawler.jsp</result>
 		</action>
@@ -226,7 +226,7 @@
 			<result name="input">/WEB-INF/page/common/schedule/jobinfo/edit_crawler.jsp</result>
 		</action>
 	</package>
-	<package name="scheduling.jobreport" extends="struts-default" namespace="/scheduling/jobreport">
+	<package name="schedule.jobreport" extends="struts-default" namespace="/schedule/jobreport">
 		<action name="index" class="com.sshdemo.common.schedule.manage.web.JobReportAction" method="getJobReport">
 			<result name="input">/WEB-INF/page/common/schedule/jobinfo/edit_report.jsp</result>
 		</action>

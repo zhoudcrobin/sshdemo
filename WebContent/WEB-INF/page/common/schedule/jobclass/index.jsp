@@ -6,11 +6,11 @@
 <html>
 	<head>
 		<title>作业设置</title>	
-		<s:include value="../../../taglibs.jsp"/>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
 		<script type="text/javascript">
 		$(function(){
 			ewcmsBOBJ = new EwcmsBase();
-			ewcmsBOBJ.setQueryURL('<s:url namespace="/scheduling/jobclass" action="query"/>');
+			ewcmsBOBJ.setQueryURL('<s:url namespace="/schedule/jobclass" action="query"/>');
 
 			ewcmsBOBJ.setWinWidth(620);
 			ewcmsBOBJ.setWinHeight(210);
@@ -26,8 +26,8 @@
 
 			ewcmsOOBJ = new EwcmsOperate();
 			ewcmsOOBJ.setQueryURL(ewcmsBOBJ.getQueryURL());
-			ewcmsOOBJ.setInputURL('<s:url namespace="/scheduling/jobclass" action="input"/>');
-			ewcmsOOBJ.setDeleteURL('<s:url namespace="/scheduling/jobclass" action="delete"/>');
+			ewcmsOOBJ.setInputURL('<s:url namespace="/schedule/jobclass" action="input"/>');
+			ewcmsOOBJ.setDeleteURL('<s:url namespace="/schedule/jobclass" action="delete"/>');
 		});
 		</script>		
 	</head>

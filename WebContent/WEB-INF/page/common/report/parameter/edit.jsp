@@ -6,10 +6,10 @@
 <html>
 	<head>
 		<title>参数设置</title>
-		<s:include value="../../../taglibs.jsp"/>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
         <script type="text/javascript">
 	    	$(function() {
-	            <s:include value="../../../alertMessage.jsp"/>
+	    		<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
 	    		$('#userName').combobox({
 	    			url: '<s:url namespace="/report/parameter" action="sessionInfo"><s:param name="parameterId" value="parameterVo.id"></s:param></s:url>',
 	    			valueField:'id',

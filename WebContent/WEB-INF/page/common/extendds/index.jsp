@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<title>数据源设置</title>
-		<s:include value="../../taglibs.jsp"/>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
 		<script type="text/javascript">
 			$(function(){
 				$('#systemtab').tabs({

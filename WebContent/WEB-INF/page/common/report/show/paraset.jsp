@@ -2,15 +2,15 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ page pageEncoding="UTF-8" %> 
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%@ taglib prefix="ewcms" uri="/ewcms-tags"%>
+<%@ taglib prefix="self" uri="/self-tags"%>
 <%@ taglib prefix="sec" uri = "http://www.springframework.org/security/tags"%>
 
 <html>
 	<head>
-		<title>查询参数设置</title>
-		<s:include value="../../../taglibs.jsp"/>
-		<script type="text/javascript" src='<s:url value="/ewcmssource/js/extendds.js"/>'></script>
-		<ewcms:datepickerhead/>
+		<title>参数设置</title>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
+		<script type="text/javascript" src='<s:url value="/comresource/js/extendds.js"/>'></script>
+		<self:datepickerhead/>
 		<script type="text/javascript">
 			function checkBoxValue(name){
 				var strValue = '';
@@ -74,7 +74,7 @@
 											<s:hidden name="paraMap['%{enName}']"/>
 										</s:if>		
 										<s:if test='type.name().equals("DATE")'>
-											<ewcms:datepicker name="paraMap['%{enName}']"/>
+											<self:datepicker name="paraMap['%{enName}']"/>
 										</s:if>		
 										<s:if test='type.name().equals("SESSION")'>
 											<s:if test='value.get("0").equals("SPRING_SECURITY_CONTEXT")'>

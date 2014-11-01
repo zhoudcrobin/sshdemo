@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<title>报表存储</title>	
-		<s:include value="../../../taglibs.jsp"/>
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
 		<script type="text/javascript">
 		$(function(){
 			ewcmsBOBJ = new EwcmsBase();
@@ -34,7 +34,6 @@
 
 			ewcmsOOBJ = new EwcmsOperate();
 			ewcmsOOBJ.setQueryURL(ewcmsBOBJ.getQueryURL());
-			//ewcmsOOBJ.setInputURL('<s:url namespace="/report/repository" action="input"/>');
 			ewcmsOOBJ.setDeleteURL('<s:url namespace="/report/repository" action="delete"/>');
 		});
 		function download(id){
