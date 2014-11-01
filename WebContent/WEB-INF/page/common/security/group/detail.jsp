@@ -6,7 +6,7 @@
 <head>
 <title>用户组明细</title>
 <s:include value="../../../taglibs.jsp"/>
-<script type="text/javascript" src='<s:url value="/ewcmssource/page/security/group/detail.js"/>'></script>
+<script type="text/javascript" src='<s:url value="/ewcmssource/js/group/detail.js"/>'></script>
 
 <script type="text/javascript">
     $(function() {

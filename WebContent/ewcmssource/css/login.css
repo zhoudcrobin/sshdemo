@@ -1,5 +1,5 @@
 #userlogin_body {
-	padding-right: 0px; padding-left: 0px; background: url(../../image/login/user_all_bg.gif) #226cc5 repeat-x 50% top; padding-bottom: 0px; margin: 110px 0px 0px; font: 12px/150% arial, 宋体 ,helvetica,sans-serif; padding-top: 0px; text-decoration: none
+	padding-right: 0px; padding-left: 0px; background: url(../image/login/user_all_bg.gif) #226cc5 repeat-x 50% top; padding-bottom: 0px; margin: 110px 0px 0px; font: 12px/150% arial, 宋体 ,helvetica,sans-serif; padding-top: 0px; text-decoration: none
 }
 #user_login {
 	padding-right: 0px; padding-left: 0px; padding-bottom: 0px; margin: 0px; padding-top: 0px
@@ -71,28 +71,28 @@ form {
 	float: left; list-style-type: none
 }
 .user_top_r {
-	background: url(../../image/login/user_top_r.gif) no-repeat 50% top
+	background: url(../image/login/user_top_r.gif) no-repeat 50% top
 }
 .user_top_c {
-	background: url(../../image/login/user_top_c.gif) no-repeat 50% top
+	background: url(../image/login/user_top_c.gif) no-repeat 50% top
 }
 .user_top_l {
-	background: url(../../image/login/user_top_l.gif) no-repeat 50% top
+	background: url(../image/login/user_top_l.gif) no-repeat 50% top
 }
 .user_main_r {
-	background: url(../../image/login/user_main_r.gif) #bec5cc no-repeat 50% top
+	background: url(../image/login/user_main_r.gif) #bec5cc no-repeat 50% top
 }
 .user_main_c {
-	background: url(../../image/login/user_main_c.gif) #bec5cc no-repeat 50% top; width: 280px
+	background: url(../image/login/user_main_c.gif) #bec5cc no-repeat 50% top; width: 280px
 }
 .user_main_l {
-	background: url(../../image/login/user_main_l.gif) #bec5cc no-repeat 50% top
+	background: url(../image/login/user_main_l.gif) #bec5cc no-repeat 50% top
 }
 .user_bottom_r {
-	background: url(../../image/login/user_bottom_r.gif) no-repeat 50% top
+	background: url(../image/login/user_bottom_r.gif) no-repeat 50% top
 }
 .user_bottom_c {
-	background: url(../../image/login/user_bottom_c.gif) no-repeat 50% top; color: #fff; line-height: 117px; padding-top: 20px; text-align: right
+	background: url(../image/login/user_bottom_c.gif) no-repeat 50% top; color: #fff; line-height: 117px; padding-top: 20px; text-align: right
 }
 .user_bottom_c a {
 	color: yellow; text-decoration: underline
@@ -101,7 +101,7 @@ form {
 	color: #c00
 }
 .user_bottom_l {
-	background: url(../../image/login/user_bottom_l.gif) no-repeat 50% top
+	background: url(../image/login/user_bottom_l.gif) no-repeat 50% top
 }
 .user_top_r {
 	float: left; width: 180px
@@ -188,13 +188,13 @@ user_main_c {
 	margin-bottom: -2px; margin-left: -25px
 }
 .txtusernamecssclass {
-	border-top-width: 0px; padding-left: 25px; border-left-width: 0px; background: url(../../image/login/user_login_name.gif) no-repeat; ime-mode: disabled; border-bottom-width: 0px; width: 165px; line-height: 20px; height: 21px; border-right-width: 0px;
+	border-top-width: 0px; padding-left: 25px; border-left-width: 0px; background: url(../image/login/user_login_name.gif) no-repeat; ime-mode: disabled; border-bottom-width: 0px; width: 165px; line-height: 20px; height: 21px; border-right-width: 0px;
 }
 .txtpasswordcssclass {
-	border-top-width: 0px; padding-left: 25px; border-left-width: 0px; background: url(../../image/login/user_login_password.gif) no-repeat; ime-mode: disabled; border-bottom-width: 0px; width: 165px; line-height: 20px; height: 21px; border-right-width: 0px;
+	border-top-width: 0px; padding-left: 25px; border-left-width: 0px; background: url(../image/login/user_login_password.gif) no-repeat; ime-mode: disabled; border-bottom-width: 0px; width: 165px; line-height: 20px; height: 21px; border-right-width: 0px;
 }
 .txtvalidatecodecssclass {
-	border-top-width: 0px; padding-left: 25px; border-left-width: 0px; background: url(../../image/login/user_login_validatecode.gif) no-repeat; ime-mode: disabled; border-bottom-width: 0px; width: 66px; line-height: 20px; height: 21px; border-right-width: 0px;
+	border-top-width: 0px; padding-left: 25px; border-left-width: 0px; background: url(../image/login/user_login_validatecode.gif) no-repeat; ime-mode: disabled; border-bottom-width: 0px; width: 66px; line-height: 20px; height: 21px; border-right-width: 0px;
 }
 .ibtnentercssclass {
 	width: 111px; height: 122px

@@ -9,7 +9,7 @@
 	<head>
 		<title>查询参数设置</title>
 		<s:include value="../../../taglibs.jsp"/>
-		<script type="text/javascript" src='<s:url value="/ewcmssource/page/ds/index.js"/>'></script>
+		<script type="text/javascript" src='<s:url value="/ewcmssource/js/extendds.js"/>'></script>
 		<ewcms:datepickerhead/>
 		<script type="text/javascript">
 			function checkBoxValue(name){

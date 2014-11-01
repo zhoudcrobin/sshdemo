@@ -1673,8 +1673,8 @@ a.s-btn-plain-active .s-btn-downarrow{
 
 .bs{ }
 .bs a{ width:10px; height:9px; margin-right:10px; float:left; }
-.bs .a1{ background:url(../../../image/skin/sunny.gif) no-repeat;float:left;margin-left:55px;display:inline;margin-top:2px;}
-.bs .a2{ background:url(../../../image/skin/cupertino.gif) no-repeat;margin-top:2px;}
-.bs .a3{  background:url(../../../image/skin/default.gif) no-repeat;margin-top:2px;}
-.bs .a4{  background:url(../../../image/skin/dark-hive-check.gif) no-repeat;margin-top:2px;}
-.bs .a5{  background:url(../../../image/skin/pepper-grinder.gif) no-repeat;margin-top:2px;}
+.bs .a1{ background:url(../../skin/image/sunny.gif) no-repeat;float:left;margin-left:55px;display:inline;margin-top:2px;}
+.bs .a2{ background:url(../../skin/image/cupertino.gif) no-repeat;margin-top:2px;}
+.bs .a3{  background:url(../../skin/image/default.gif) no-repeat;margin-top:2px;}
+.bs .a4{  background:url(../../skin/image/dark-hive-check.gif) no-repeat;margin-top:2px;}
+.bs .a5{  background:url(../../skin/image/pepper-grinder.gif) no-repeat;margin-top:2px;}

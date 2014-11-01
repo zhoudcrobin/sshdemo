@@ -7,9 +7,13 @@
     <head>
         <title>sshdemo</title>
         <s:include value="taglibs.jsp"/>
-        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/page/home.css"/>'/>
-        <script type="text/javascript" src='<s:url value="/ewcmssource/page/home.js"/>'></script>
-        <script type="text/javascript" src='<s:url value="/ewcmssource/fcf/js/FusionCharts.js"/>'></script>
+        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/css/home.css"/>'/>
+        <script type="text/javascript" src='<s:url value="/ewcmssource/js/home.js"/>'></script>
+        <script type="text/javascript" src='<s:url value="/ewcmssource/easyui/skin/skin.js"/>'></script>
+        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/easyui/themes/dark-hive/easyui.css"/>' title="dark-hive"/>
+        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/easyui/themes/cupertino/easyui.css"/>' title="cupertino"/>
+        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/easyui/themes/pepper-grinder/easyui.css"/>'  title="pepper-grinder"/>
+        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/easyui/themes/sunny/easyui.css"/>' title="sunny"/>
         <script type="text/javascript">
             var _home = new home();
             $(function(){
@@ -35,7 +39,7 @@
         			<td width="50%">
         				<table width="100%">
         					<tr>
-			        			<td height="30px" width="97%" style="text-align: right"><span style="font-size:13px;font-weight: bold;color:white;">标签1|标签2|<s:property value="realName"/> </span></td>
+			        			<td height="30px" width="97%" style="text-align: right"><span style="font-size:13px;font-weight: bold;color:white;">标签1|标签2|标签3|<s:property value="realName"/> </span></td>
         						<td width="2%"><a id="button-main" href="#" style="border:0;padding:0;"><img src="<s:url value='/ewcmssource/image/exit.png'/>" width="17" height="17" style="border:0;"/></a></td>
         						<td width="1%"></td>
         					</tr>
@@ -43,13 +47,11 @@
         						<td height="20px" colspan="2" >
         							<table width="100%">
         								<tr>
-        									<td width="45%" style="text-align:right;">
-			        							
-			        						</td>
-			        						<td width="55%" style="text-align:right">
-			        							<div >
+        								<td></td>
+			        						<td width="330" style="text-align:right">
+			        							<div class="bs">
 													<a class="styleswitch a1" style="cursor: pointer" title="黄色" rel="sunny"></a>
-													<a class="styleswitch a2" style="cursor: pointer" title="蓝色" rel="default"></a>	
+													<a class="styleswitch a3" style="cursor: pointer" title="蓝色" rel="default"></a>	
 													<a class="styleswitch a4" style="cursor: pointer" title="黑色" rel="dark-hive"></a>	
 													<a class="styleswitch a5" style="cursor: pointer" title="灰色" rel="pepper-grinder"></a>		
 												</div>
@@ -133,7 +135,7 @@
                         </a>
                	    </div>
                	    <div class="nav-item">
-                         <a href="javascript:_home.addTab('数据源','ds/index.do')">
+                         <a href="javascript:_home.addTab('数据源','extendds/index.do')">
                             <img src="ewcmssource/image/report_ds.png" style="border:0"/><br/>
                             <span>数据源</span>
                         </a>

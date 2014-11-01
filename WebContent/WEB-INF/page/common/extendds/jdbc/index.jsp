@@ -7,7 +7,7 @@
 	<head>
 		<title>Jdbc数据源</title>	
 		<s:include value="../../../taglibs.jsp"/>
-		<script type="text/javascript" src='<s:url value="/ewcmssource/page/ds/index.js"/>'></script>
+		<script type="text/javascript" src='<s:url value="/ewcmssource/js/extendds.js"/>'></script>
 		<script type="text/javascript">
 			connectTest = "<s:url namespace='/extendds/connect' action='test'/>";
 			$(function(){

@@ -6,7 +6,7 @@
 <head>
  <title>初始用户密码</title>
 	<s:include value="../../../taglibs.jsp"/>
-    <script type="text/javascript" src='<s:url value="/ewcmssource/page/security/user/initpassword.js"/>'></script>
+    <script type="text/javascript" src='<s:url value="/ewcmssource/js/user/initpassword.js"/>'></script>
     
     <script type="text/javascript">
         $(function(){

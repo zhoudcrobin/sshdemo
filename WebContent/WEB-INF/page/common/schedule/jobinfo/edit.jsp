@@ -8,11 +8,11 @@
 <html>
 	<head>
 		<title>调度器任务</title>
-		<s:include value="../../taglibs.jsp"/>
-		<script type="text/javascript" src='<s:url value="/ewcmssource/page/scheduling/jobinfo/edit.js"/>'></script>
+		<s:include value="../../../taglibs.jsp"/>
+		<script type="text/javascript" src='<s:url value="/ewcmssource/js/jobinfo.js"/>'></script>
         <script type="text/javascript">
 	        $(function(){
-	            <s:include value="../../alertMessage.jsp"/>
+	            <s:include value="../../../alertMessage.jsp"/>
 	        });
         </script>	
         <ewcms:datepickerhead></ewcms:datepickerhead>	

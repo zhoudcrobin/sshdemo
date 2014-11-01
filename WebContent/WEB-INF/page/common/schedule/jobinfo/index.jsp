@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<title>作业设置</title>	
-		<s:include value="../../taglibs.jsp"/>
+		<s:include value="../../../taglibs.jsp"/>
 		<script type="text/javascript">
 		$(function(){
 			ewcmsBOBJ = new EwcmsBase();

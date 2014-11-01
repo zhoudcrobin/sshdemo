@@ -19,7 +19,7 @@
 				<tr>
 					<td>名称：</td>
 					<td class="formFieldError">
-						<s:textfield name="beanDSVo.name" cssClass="inputtext"maxlength="10" />
+						<s:textfield name="beanDSVo.name" cssClass="inputtext" maxlength="10" />
 						<s:fielderror><s:param value="%{'beanDSVo.name'}" /></s:fielderror>&nbsp;&nbsp;<label style="color: red;">*</label>
 					</td>
 				</tr>

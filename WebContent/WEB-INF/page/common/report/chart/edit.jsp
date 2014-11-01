@@ -7,9 +7,6 @@
 	<head>
 		<title>Bean数据源设置</title>
 		<s:include value="../../../taglibs.jsp"/>
-        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/codemirror/lib/codemirror.css"/>'/>
-        <script type="text/javascript" src='<s:url value="/ewcmssource/codemirror/lib/codemirror.js"/>'></script>
-        <script type="text/javascript" src='<s:url value="/ewcmssource/codemirror/mode/plsql/plsql.js"/>'></script>
 		<style type="text/css">
 	      .CodeMirror {
 	        border: 1px solid #eee;
@@ -53,7 +50,7 @@
 				<tr>
 					<td>图表类型：</td>
 					<td>
-						<s:select list="@com.ewcms.plugin.report.model.ChartReport$Type@values()" listValue="description" name="chartReportVo.type" id="chartReportVo.type"></s:select>
+						<s:select list="@com.sshdemo.common.report.model.ChartReport$Type@values()" listValue="description" name="chartReportVo.type" id="chartReportVo.type"></s:select>
 					</td>
 					<td>工具提示：</td>
 					<td>
@@ -154,13 +151,5 @@
                 <s:hidden name="selections" value="%{id}"/>
             </s:iterator>			
 		</s:form>
-		<script type="text/javascript">
-      		var editor = CodeMirror.fromTextArea(document.getElementById("chartSql"), {
-        		lineNumbers: true,
-        		matchBrackets: true,
-        		indentUnit: 4,
-        		mode: "text/x-plsql"
-      		});
-    	</script>
 	</body>
 </html>

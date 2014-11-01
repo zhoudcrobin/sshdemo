@@ -7,7 +7,7 @@
     <title>用户</title>
 	<s:include value="../../../taglibs.jsp"/>
     <script type="text/javascript" src='<s:url value="/ewcmssource/easyui/ext/datagrid-detailview.js"/>'></script>
-    <script type="text/javascript" src='<s:url value="/ewcmssource/page/security/user/index.js"/>'></script>
+    <script type="text/javascript" src='<s:url value="/ewcmssource/js/user/index.js"/>'></script>
     
      <script type="text/javascript">
          var _userIndex = new UserIndex({

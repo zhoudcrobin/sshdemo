@@ -6,8 +6,8 @@
     <head>
         <title>修改密码</title>
 		<s:include value="../../../taglibs.jsp"/>
-        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/page/security/account/password.css"/>'/>
-        <script type="text/javascript" src='<s:url value="/ewcmssource/page/security/account/digitialspaghetti.password.min.js"/>'></script>
+        <link rel="stylesheet" type="text/css" href='<s:url value="/ewcmssource/css/password.css"/>'/>
+        <script type="text/javascript" src='<s:url value="/ewcmssource/js/account/digitialspaghetti.password.min.js"/>'></script>
         <script type="text/javascript">
             $(function(){
                 <s:include value="../../../alertMessage.jsp"/>
