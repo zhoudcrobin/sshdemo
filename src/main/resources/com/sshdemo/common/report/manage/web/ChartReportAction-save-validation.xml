@@ -5,7 +5,12 @@
 <validators>
 	<field name="chartReportVo.name">
 		<field-validator type="requiredstring">
-			<message>必须输入报表名</message>
+			<message>报表名不能为空</message>
+		</field-validator>
+	</field>
+	<field name="chartReportVo.chartSql">
+		<field-validator type="requiredstring">
+			<message>sql语句不能为空</message>
 		</field-validator>
 	</field>
 </validators>

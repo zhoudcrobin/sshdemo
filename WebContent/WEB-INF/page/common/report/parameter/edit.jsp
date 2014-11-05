@@ -9,7 +9,6 @@
 		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
         <script type="text/javascript">
 	    	$(function() {
-	    		<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
 	    		$('#userName').combobox({
 	    			url: '<s:url namespace="/report/parameter" action="sessionInfo"><s:param name="parameterId" value="parameterVo.id"></s:param></s:url>',
 	    			valueField:'id',
@@ -66,7 +65,7 @@
 				<tr>
 					<td>数据输入方式：</td>
 					<td>
-						<s:select list="@com.ewcms.plugin.report.model.Parameter$Type@values()" listValue="description" name="parameterVo.type" id="type"></s:select>
+						<s:select list="@com.sshdemo.common.report.model.Parameter$Type@values()" listValue="description" name="parameterVo.type" id="type"></s:select>
 					</td>
 					<td>辅助数据设置：</td>
 					<td>

@@ -45,8 +45,12 @@ public class CategoryReportService implements CategoryReportServiceable {
 			if (source.getTexts() != null && !source.getTexts().isEmpty()){
 				categoryReport.setTexts(source.getTexts());
 			}
+			categoryReportDAO.merge(categoryReport);
 		}
-		categoryReportDAO.merge(categoryReport);
+		else{
+			categoryReportDAO.persist(categoryReport);
+		}
+		
 		return categoryReport.getId();
 	}
 

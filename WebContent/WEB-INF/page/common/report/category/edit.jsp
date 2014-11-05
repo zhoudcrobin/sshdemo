@@ -6,12 +6,7 @@
 <html>
 	<head>
 		<title>报表分类设置</title>
-		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
-        <script type="text/javascript">
-	        $(function(){
-	        	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
-	        });
-        </script>		
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>		
 	</head>
 	<body>
 		<s:form action="save" namespace="/report/category">

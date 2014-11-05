@@ -19,6 +19,7 @@
 				ewcmsBOBJ.delToolItem('删除');
 				
 				ewcmsBOBJ.openDataGrid('#tt',{
+					singleSelect:true,
 	                columns:[[
 	  						{field:'id',title:'编号',width:50},
 							{field:'enName',title:'参数名',width:200},

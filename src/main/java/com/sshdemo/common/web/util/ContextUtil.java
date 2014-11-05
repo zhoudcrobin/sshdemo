@@ -21,7 +21,7 @@ import com.sshdemo.common.security.manage.service.GroupServiceable;
  *
  * @author wangwei
  */
-public class EwcmsContextUtil {
+public class ContextUtil {
 
 
     private static Collection<String> getGrantedAuthorities(String perfix){

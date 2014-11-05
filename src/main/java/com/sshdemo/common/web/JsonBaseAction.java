@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 
 import com.sshdemo.common.web.util.JSONUtil;
 import com.sshdemo.common.web.util.Struts2Util;
-
 /**
  * Json Action基础类，实现Json 操作通用方法
  * 

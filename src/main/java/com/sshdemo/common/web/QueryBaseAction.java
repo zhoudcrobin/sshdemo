@@ -37,7 +37,7 @@ import com.sshdemo.common.web.vo.DataGrid;
  *
  * @author wangwei
  */
-public abstract class QueryBaseAction extends EwcmsBaseAction {
+public abstract class QueryBaseAction extends BaseAction {
 
 	private static final long serialVersionUID = -8950933231894294100L;
 

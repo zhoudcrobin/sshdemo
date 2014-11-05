@@ -9,11 +9,6 @@
         <jsp:include page='/comresource/inifile/pageresource.jsp'/>
         <link rel="stylesheet" type="text/css" href='<s:url value="/comresource/css/home.css"/>'/>
         <script type="text/javascript" src='<s:url value="/comresource/js/home.js"/>'></script>
-        <script type="text/javascript" src='<s:url value="/comresource/easyui/skin/skin.js"/>'></script>
-        <link rel="stylesheet" type="text/css" href='<s:url value="/comresource/easyui/themes/dark-hive/easyui.css"/>' title="dark-hive"/>
-        <link rel="stylesheet" type="text/css" href='<s:url value="/comresource/easyui/themes/cupertino/easyui.css"/>' title="cupertino"/>
-        <link rel="stylesheet" type="text/css" href='<s:url value="/comresource/easyui/themes/pepper-grinder/easyui.css"/>'  title="pepper-grinder"/>
-        <link rel="stylesheet" type="text/css" href='<s:url value="/comresource/easyui/themes/sunny/easyui.css"/>' title="sunny"/>
         <script type="text/javascript">
             var _home = new home();
             $(function(){

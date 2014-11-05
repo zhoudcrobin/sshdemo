@@ -29,10 +29,6 @@
 		<filter-name>springSecurityFilterChain</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-
-
-
-	
 	<filter>
 		<filter-name>CharacterEncoding</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -73,23 +69,6 @@
 	<servlet-mapping>
 		<servlet-name>jcaptcha</servlet-name>
 		<url-pattern>/checkcode.jpg</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>pubsub</servlet-name>
-		<servlet-class>com.sshdemo.common.web.pubsub.PubsubServlet</servlet-class>
-		<init-param>
-			<param-name>/pubsub/progress</param-name>
-			<param-value>com.sshdemo.common.web.pubsub.ProgressSender</param-value>
-		</init-param>
-		<init-param>
-			<param-name>/pubsub/message</param-name>
-			<param-value>com.sshdemo.common.web.pubsub.MessageSender</param-value>
-		</init-param>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>pubsub</servlet-name>
-		<url-pattern>/pubsub/*</url-pattern>
 	</servlet-mapping>
 <!-- 
 	<error-page>

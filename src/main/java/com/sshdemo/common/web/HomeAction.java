@@ -23,7 +23,7 @@ import com.sshdemo.common.security.manage.SecurityFacable;
  * @author 周冬初
  */
 @Controller("home")
-public class HomeAction extends EwcmsBaseAction {
+public class HomeAction extends BaseAction {
     
 	private static final long serialVersionUID = -1585813168152878468L;
 

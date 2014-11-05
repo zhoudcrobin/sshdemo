@@ -19,12 +19,7 @@
 	        overflow-y: auto;
 	        overflow-x: auto;
 	      }
-    	</style>
-    	<script type="text/javascript">
-	        $(function(){
-	        	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
-	        });
-        </script>		
+    	</style>	
 	</head>
 	<body>
 		<s:form action="save" namespace="/report/chart">
@@ -43,7 +38,7 @@
 				<tr>
 					<td>SQL表达式：<br/><a id="regexHelp" href="javascript:void(0);" class="easyui-linkbutton" plain="true" iconCls="icon-help" onclick="parent.helpOperate();"></a></td>
 					<td class="formFieldError" colspan="3">
-						<s:textarea id="chartSql" name="chartReportVo.chartSql"/><s:fielderror><s:param value="%{'chartReportVo.chartSql'}" /></s:fielderror>
+						<s:textarea id="chartSql" name="chartReportVo.chartSql" cols="70"/><s:fielderror><s:param value="%{'chartReportVo.chartSql'}" /></s:fielderror>&nbsp;&nbsp;<label style="color: red;">*</label>
 					</td>
 					
 				</tr>

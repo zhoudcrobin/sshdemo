@@ -23,7 +23,7 @@
 			                {field:'dsName',title:'名称',width:100},
 			                {field:'jndiName',title:'jndi名称',width:200},
 			                {field:'jndiMethod',title:'jndi方法',width:200},
-			                {field:'remarks',title:'说明',width:300},
+			                {field:'remarks',title:'说明',width:100},
 			                {field:'connectTest',title:'测试',width:30,
 			                	formatter : function(val, rec) {
 			                		return "&nbsp;<a href='javascript:void(0);' onclick='test(" +  rec.id + ");'><img src=<s:url value='/comresource/image/ds/connect_test.png'/> width='13px' height='13px' title='测试' style='border:0'/></a>";

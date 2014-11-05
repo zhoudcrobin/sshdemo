@@ -6,12 +6,7 @@
 <html>
 	<head>
 		<title>文字报表信息</title>
-		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
-        <script type="text/javascript">
-	        $(function(){
-	        	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
-	        });
-        </script>		
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>	
 	</head>
 	<body>
 		<s:form action="save" namespace="/report/text" enctype="multipart/form-data" method="post">
@@ -20,14 +15,14 @@
 					<td>报表名：</td>
 					<td class="formFieldError">
 						<s:textfield name="textReportVo.name" cssClass="inputtext" maxlength="100" size="60"/>
-						<s:fielderror><s:param value="%{'textReportVoVo.name'}" /></s:fielderror>&nbsp;&nbsp;<label style="color: red;">*</label>
+						<s:fielderror><s:param value="%{'textReportVo.name'}" /></s:fielderror>&nbsp;&nbsp;<label style="color: red;">*</label>
 					</td>
 				</tr>
 				<tr>
 					<td>报表文件：</td>
 					<td class="formFieldError">
 						<s:file	name="textFile" accept="jrxml" theme="simple" onchange="javascript:if(this.value.toLowerCase().lastIndexOf('jrxml')==-1){alert('请选择jrxml文件！');this.value='';}"/>
-						<s:fielderror><s:param value="%{'textFile'}" /></s:fielderror>&nbsp;&nbsp;<label style="color: red;">*</label>
+						<s:fielderror><s:param value="%{'textFile'}" /></s:fielderror>
 					</td>
 				</tr>
 				<tr>

@@ -26,7 +26,11 @@ public class BaseDSService implements BaseDSServiceable {
 	
 	@Override
 	public Long saveOrUpdateBaseDS(BaseDS baseDS) {
-		baseDSDAO.merge(baseDS);
+		if(baseDS.getId()==null){
+			baseDSDAO.persist(baseDS);
+		}else{
+			baseDSDAO.merge(baseDS);
+		}
 		return baseDS.getId();
 	}
 

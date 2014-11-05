@@ -24,7 +24,7 @@
 			                {field:'driver',title:'驱动名',width:200},
 			                {field:'connUrl',title:'数据库连接URL',width:300},
 			                {field:'userName',title:'用户名',width:80},
-			                {field:'remarks',title:'说明',width:300},
+			                {field:'remarks',title:'说明',width:100},
 			                {field:'connectTest',title:'测试',width:30,
 			                	formatter : function(val, rec) {
 			                		return "&nbsp;<a href='javascript:void(0);' onclick='test(" +  rec.id + ");'><img src=<s:url value='/comresource/image/ds/connect_test.png'/> width='13px' height='13px' title='测试' style='border:0'/></a>";

@@ -37,10 +37,10 @@
 			                		}
 			                	}
 			                },
-			                {field:'remarks',title:'说明',width:400},
+			                {field:'remarks',title:'说明',width:150},
 			                {field:'download',title:'下载',width:30,
 			                	formatter:function(val,rec){
-			                		return "&nbsp;<a href='javascript:void(0);' onclick='download(" +  rec.id + ");'><img src=<s:url value='/comresource/css/icons/download.png'/> width='13px' height='13px' title='下载' style='border:0'/></a>";
+			                		return "&nbsp;<a href='javascript:void(0);'><img src=<s:url value='/comresource/css/icons/download.png' /> onclick='download(" +  rec.id + ");' width='13px' height='13px' title='下载' style='border:0'/></a>";
 			                	}
 			                }
 	                ]]
@@ -72,7 +72,7 @@
 				ewcmsOOBJ.setDeleteURL('<s:url namespace="/report/text" action="delete"/>');
 			});
 			function download(id){
-				window.open('<s:url namespace="/report/text" action="download"/>?textId=' + id,'popup','width=1280,height=700,resizable=yes,toolbar=no,directories=no,location=no,menubar=no,status=no,scrollbars=yes,left=' + (window.screen.width - 1280)/ 2 + ',top=' + (window.screen.height - 700) / 2);
+				window.open('<s:url namespace="/report/text" action="download"/>?textId=' + id,'popup','width=1280,height=700,left=' + (window.screen.width - 1280)/ 2 + ',top=' + (window.screen.height - 700) / 2);
 			}
 			function previewOperate(){
 				var rows = $('#tt').datagrid('getSelections');

@@ -19,7 +19,7 @@ import com.sshdemo.common.web.util.Struts2Util;
  * 
  * @author wangwei
  */
-public abstract class CrudBaseAction<T, PK> extends EwcmsBaseAction {
+public abstract class CrudBaseAction<T, PK> extends BaseAction {
 
 	private static final long serialVersionUID = -7851825457853088626L;
 

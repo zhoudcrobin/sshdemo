@@ -5,7 +5,7 @@
 <validators>
 	<field name="jndiDSVo.name">
 		<field-validator type="requiredstring">
-			<message>必须输入名称</message>
+			<message>名称不能为空</message>
 		</field-validator>
 		<field-validator type="stringlength">
 			<param name="maxLength">10</param>
@@ -14,7 +14,7 @@
 	</field>
 	<field name="jndiDSVo.jndiName">
 		<field-validator type="requiredstring">
-			<message>必须输入Jndi名</message>
+			<message>Jndi名不能为空</message>
 		</field-validator>
 		<field-validator type="stringlength">
 			<param name="maxLength">40</param>

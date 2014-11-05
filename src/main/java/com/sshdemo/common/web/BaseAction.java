@@ -13,17 +13,17 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.sshdemo.common.web.util.EwcmsContextUtil;
+import com.sshdemo.common.web.util.ContextUtil;
 
 /**
  * @author 周冬初
  *
  */
-public class EwcmsBaseAction extends ActionSupport{  
+public class BaseAction extends ActionSupport{  
 	
 	private static final long serialVersionUID = -5660770825409086565L;
 
-	private static final Logger logger = LoggerFactory.getLogger(EwcmsBaseAction.class);
+	private static final Logger logger = LoggerFactory.getLogger(BaseAction.class);
 	/**
 	 * 信息输出处理
 	 * 
@@ -39,6 +39,6 @@ public class EwcmsBaseAction extends ActionSupport{
      * @return UserDetails
      */
     public UserDetails getUserDetails(){
-        return EwcmsContextUtil.getUserDetails();
+        return ContextUtil.getUserDetails();
     }
 }
