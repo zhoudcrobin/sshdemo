@@ -10,8 +10,8 @@
     <script type="text/javascript" src='<s:url value="/comresource/js/user/edit.js"/>'></script>
     <self:datepickerhead/>
     <script type="text/javascript">
+    	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
        $(function(){
-    	   <jsp:include page='/comresource/inifile/alertmessage.jsp'/>
            var userEdit = new UserEdit({
               detailUrl:'<s:url action="detail"/>',
               hasNameUrl:'<s:url action="hasUsername"/>'
@@ -27,26 +27,25 @@
 <body class="easyui-layout" >
         <div region="center" border="false">
             <div class="easyui-tabs" border="false" fit="true">
-                 <div title="基本信息" style="padding: 5px;">
                     <s:form action="save" method="post">
                         <table class="formtable" >
                             <tr>
                                 <td width="120px">用户名称：</td>
                                 <td id="name-td" class="formFieldError" style="border: none;">
-                                    <s:if test="eventOP == 'add'">
-                                    <s:textfield id="usernameid" cssClass="inputtext" name="user.username"/>
+                                    <s:if test="eventOP == 'update'">
+                                    <s:textfield id="usernameid" cssClass="inputtext" name="user.username" readonly="true"/>
                                     </s:if>
                                     <s:else>
-                                    <s:textfield id="usernameid" cssClass="inputtext" name="user.username" readonly="true"/>
+                                    <s:textfield id="usernameid" cssClass="inputtext" name="user.username" />
                                     </s:else>
-                                    <s:fielderror ><s:param value="%{'user.username'}"/></s:fielderror>
+                                    <s:fielderror ><s:param value="%{'user.username'}"/></s:fielderror>&nbsp;&nbsp;<label style="color: red;">*</label>
                                 </td>
                            </tr>
                            <s:if test="eventOP == 'add'">
                            <tr>
                                <td width="120px">初始密码：</td>
                                <td class="formFieldError">
-                                   <s:password id="passwordId" name="user.password" cssClass="inputtext" />&nbsp;&nbsp;
+                                   <s:password id="passwordId" name="user.password" cssClass="inputtext" />
                                    <s:fielderror ><s:param value="%{'user.password'}"/></s:fielderror>
                                </td>
                            </tr>
@@ -122,15 +121,9 @@
                         <s:hidden name="newUsernames" value="%{newUsername}"/>
                         </s:iterator>
                     </s:form>
-                 </div>
-                 <s:if test="showAuthGroupTab">
-                 <div title="权限/用户组" style="padding: 5px;">
-                     <iframe id="editifr-id" class="editifr" frameborder="0" onload="iframeFitHeight(this);" scrolling="no"></iframe>
-                 </div>
-                 </s:if>
             </div>
         </div>
-        <div region="south" border="false" style="padding:3px;text-align:right;height:38px;line-height:30px;background-color:#f6f6f6">
+        <div region="south" border="false" style="padding:3px;text-align:center;height:38px;line-height:30px;background-color:#f6f6f6">
             <a class="easyui-linkbutton" id="button-new" style="display:none;" icon="icon-add" href="javascript:void(0)">新增</a>
             <a class="easyui-linkbutton" id="button-save" icon="icon-save" href="javascript:void(0)">保存</a>
             <a class="easyui-linkbutton" id="button-cancel" icon="icon-cancel" href="javascript:void(0)">关闭</a>

@@ -6,8 +6,8 @@
 <html>
 	<head>
 		<title>调度器任务执行类</title>
-		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
-        <script type="text/javascript">
+		<jsp:include page='/comresource/inifile/pageresource.jsp'/>	
+       <script type="text/javascript">
 	        $(function(){
 	        	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
 	        });

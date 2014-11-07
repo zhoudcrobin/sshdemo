@@ -10,9 +10,6 @@
 		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
 		<script type="text/javascript" src='<s:url value="/comresource/js/jobinfo.js"/>'></script>
         <script type="text/javascript">
-	        $(function(){
-	        	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
-	        });
 	        function checkBoxValue(name){
 				var strValue = '';
 				var list = document.getElementsByName(name);

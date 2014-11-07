@@ -12,8 +12,8 @@
 			ewcmsBOBJ = new EwcmsBase();
 			ewcmsBOBJ.setQueryURL('<s:url namespace="/schedule/jobinfo" action="query"/>');
 
-			ewcmsBOBJ.setWinWidth(1040);
-			ewcmsBOBJ.setWinHeight(470);
+			ewcmsBOBJ.setWinWidth(800);
+			ewcmsBOBJ.setWinHeight(430);
 			
 			ewcmsBOBJ.openDataGrid('#tt',{
                 columns:[[
@@ -34,9 +34,9 @@
 		                 		formatter:function(val,rec){
 		                 			var button_html = "";
 		                 			if (rec.state=='正常'){
-			                 			button_html = "<a href='<s:url namespace='/schedule/jobinfo' action='pause'/>?jobId=" + rec.id + "'><img src=<s:url value='/comresource/image/scheduling/pause.png'/> width='13px' height='13px' title='暂停操作'/></a>";
+			                 			button_html = "<a href='<s:url namespace='/schedule/jobinfo' action='pause'/>?jobId=" + rec.id + "'><img src=<s:url value='/comresource/image/schedule/pause.png'/> width='13px' height='13px' title='暂停操作'/></a>";
 		                 			}else if (rec.state=='暂停'){
-			                 			button_html = "<a href='<s:url namespace='/schedule/jobinfo' action='resumed'/>?jobId=" + rec.id + "'><img src=<s:url value='/ewcmssource/image/scheduling/resumed.png'/> width='13px' height='13px' title='恢复操作'/></a>";
+			                 			button_html = "<a href='<s:url namespace='/schedule/jobinfo' action='resumed'/>?jobId=" + rec.id + "'><img src=<s:url value='/ewcmssource/image/schedule/resumed.png'/> width='13px' height='13px' title='恢复操作'/></a>";
 		                 			}
 		                 			return button_html;
 		                 		}

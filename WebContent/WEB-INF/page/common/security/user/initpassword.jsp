@@ -10,7 +10,6 @@
     
     <script type="text/javascript">
         $(function(){
-        	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
             var initPassword = new InitPassword();
             initPassword.init();
         });

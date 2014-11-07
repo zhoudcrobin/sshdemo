@@ -70,7 +70,7 @@ public class User implements Serializable {
 
     @OneToOne(cascade = {CascadeType.ALL}, targetEntity = UserInfo.class,fetch = FetchType.EAGER)
     @PrimaryKeyJoinColumn
-    private UserInfo userInfo;
+    private UserInfo userInfo = new UserInfo();
 
     @ManyToMany(cascade = {CascadeType.REFRESH}, targetEntity = Group.class, fetch = FetchType.LAZY)
     @JoinTable(name = "auth_group_members", joinColumns = @JoinColumn(name = "username"), inverseJoinColumns = @JoinColumn(name = "group_name"))

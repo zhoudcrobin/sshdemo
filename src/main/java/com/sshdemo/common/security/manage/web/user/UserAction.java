@@ -140,9 +140,9 @@ public class UserAction extends ActionSupport{
                         user.getAccountEnd(), user.getUserInfo());
                 newUsernames = (newUsernames == null ? new ArrayList<String>() : newUsernames);
                 newUsernames.add(username);
-                addActionMessage("添加用户成功，可以添加权限和所属用户组");
+                setUser(new User());
             }
-            showAuthGroupTab = true; 
+            showAuthGroupTab = true;
             return SUCCESS;
         }catch(UserServiceException e){
             addActionError(e.getMessage());

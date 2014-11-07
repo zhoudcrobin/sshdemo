@@ -8,8 +8,8 @@
 	<jsp:include page='/comresource/inifile/pageresource.jsp'/>
     <script type="text/javascript" src='<s:url value="/comresource/js/group/edit.js"/>'></script>
     <script type="text/javascript">
+    	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
        $(function(){
-    	   <jsp:include page='/comresource/inifile/alertmessage.jsp'/>
            var groupEdit = new GroupEdit({
               detailUrl:'<s:url action="detail"/>',
               hasNameUrl:'<s:url action="hasGroupname"/>'
@@ -26,7 +26,6 @@
 <body class="easyui-layout" >
         <div region="center" border="false">
             <div class="easyui-tabs" border="false" fit="true">
-                 <div title="基本信息" style="padding: 5px;">
                      <s:form action="save" method="post">
                         <table class="formtable">
                             <tr>
@@ -42,7 +41,7 @@
                                                 <s:else>
                                                 <s:textfield cssClass="inputtext" name="name" readonly="true" cssStyle="width:350px;" />
                                                 </s:else>
-                                                <s:fielderror><s:param value="%{'name'}"/></s:fielderror>
+                                                <s:fielderror><s:param value="%{'name'}"/></s:fielderror>&nbsp;&nbsp;<label style="color: red;">*</label>
                                             </td>
                                         </tr>
                                     </table>
@@ -61,18 +60,7 @@
                             <s:hidden name="newGroupNames" value="%{newName}"/>
                         </s:iterator>
                      </s:form>
-                 </div>
-                 <s:if test="showAuthUserTab">
-                 <div title="权限/用户" style="padding: 5px;">
-                     <iframe id="editifr-id" class="editifr" frameborder="0" onload="iframeFitHeight(this);" scrolling="no"></iframe>
-                 </div>
-                 </s:if>
             </div>
         </div>
-        <div region="south" border="false" style="padding:3px;text-align:right;height:38px;line-height:30px;background-color:#f6f6f6">
-            <a class="easyui-linkbutton" id="button-new" style="display:none;" icon="icon-add" href="javascript:void(0)">新增</a>
-            <a class="easyui-linkbutton" id="button-save" icon="icon-save" href="javascript:void(0)">保存</a>
-            <a class="easyui-linkbutton" id="button-cancel" icon="icon-cancel" href="javascript:void(0)">关闭</a>
-       </div>
 </body>
 </html>

@@ -79,6 +79,7 @@ public class JobClassAction extends CrudBaseAction<JobClass, Long> {
 				return schedulingFac.saveJobClass(vo);
 			}
 		}catch(BaseException e){
+			setAlqcJobClassVo(super.getVo());
 			this.addActionMessage(e.getPageMessage());
 			return null;
 		}

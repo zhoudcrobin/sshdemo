@@ -17,16 +17,8 @@ UserEdit.prototype._queryNew = function(){
 }
 
 UserEdit.prototype.init = function(opts){
- 
     var urls = this._urls;
-    
-    if(opts.addSaveState){
-        $("#button-save").css('display','none');
-        $("#button-new").css('display','');
-        $('input[type=text]').attr('readonly',true);
-        this._queryNew();
-    }
-
+    this._queryNew();
     $(".easyui-tabs").tabs({
         onSelect:function(title){  
             if(title == "权限/用户组" && !$('#editifr-id').attr('src')){

@@ -10,11 +10,6 @@
 		<title>调度器任务</title>
 		<jsp:include page='/comresource/inifile/pageresource.jsp'/>
 		<script type="text/javascript" src='<s:url value="/comresource/js/jobinfo.js"/>'></script>
-        <script type="text/javascript">
-	        $(function(){
-	        	<jsp:include page='/comresource/inifile/alertmessage.jsp'/>
-	        });
-        </script>	
         <self:datepickerhead/>
 	</head>
 	<body>
@@ -34,7 +29,7 @@
 							<s:select list="allJobClassList" name="pageDisplayVo.jobClassId" listKey="id" listValue="className" cssClass="inputtext"></s:select>
 						</s:if>
 						<s:fielderror><s:param value="%{'pageDisplayVo.jobClassId'}" /></s:fielderror>
-						<font color="red" style="vertical-align: middle;">&nbsp;&nbsp;*</font>
+						&nbsp;&nbsp;<label style="color: red;">*</label>
 					</td>
 				</tr>
 				<tr>
@@ -109,12 +104,8 @@
 				<tr>
 					<td>开始时间：</td>
 					<td colspan="3" class="formFieldError">
-						<!-- 
-						<s:radio id="start_" name="pageDisplayVo.start" list='#{1:"&nbsp;立刻执行"}' cssStyle="vertical-align: middle;"></s:radio> 
-						<s:radio id="start_" name="pageDisplayVo.start" list='#{2:"&nbsp;在"}' value="2" cssStyle="vertical-align: middle;"></s:radio>
-						 -->
 						<self:datepicker id="startDate" name="pageDisplayVo.startDate" option="inputsimple" format="yyyy-MM-dd HH:mm" disabled="false" cssClass="inputtext"/>
-						<s:fielderror><s:param value="%{'pageDisplayVo.startDate'}" /></s:fielderror><font color="red">&nbsp;&nbsp;*</font>
+						<s:fielderror><s:param value="%{'pageDisplayVo.startDate'}" /></s:fielderror>&nbsp;&nbsp;<label style="color: red;">*</label>
 					</td>
 				</tr>
 				<tr>

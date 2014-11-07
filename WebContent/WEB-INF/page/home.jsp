@@ -72,6 +72,12 @@
               <div id="mainmenu" class="easyui-accordion" fit="true" border="false">
                	<div title="报表管理" style="overflow:auto;">
                	    <div class="nav-item">
+                         <a href="javascript:_home.addTab('报表制作','report/show/index.do')">
+                            <img src="comresource/image/report_text.png" style="border:0"/><br/>
+                            <span>报表制作</span>
+                        </a>
+               	    </div>                  	
+               	    <div class="nav-item">
                          <a href="javascript:_home.addTab('文字报表','report/text/index.do')">
                             <img src="comresource/image/report_text.png" style="border:0"/><br/>
                             <span>文字报表</span>
@@ -100,13 +106,7 @@
                             <img src="comresource/image/report_ds.png" style="border:0"/><br/>
                             <span>数据源</span>
                         </a>
-               	    </div>
-               	    <div class="nav-item">
-                         <a href="javascript:_home.addTab('报表制作','report/show/index.do')">
-                            <img src="comresource/image/report_text.png" style="border:0"/><br/>
-                            <span>报表制作</span>
-                        </a>
-               	    </div>    
+               	    </div> 
                	</div>              
                 <div title="任务计划" style="overflow:auto;">
                 	 <div class="nav-item">
