@@ -68,7 +68,7 @@
              </div>
         </div>
         <div region="south" split="true" style="height:2px;background:#efefef;overflow:hidden;"></div>
-        <div region="west" split="true" title="EWCMS平台菜单" style="width:180px;padding:1px;overflow:hidden;">
+        <div region="west" split="true" title="基本功能菜单" style="width:180px;padding:1px;overflow:hidden;">
               <div id="mainmenu" class="easyui-accordion" fit="true" border="false">
                	<div title="报表管理" style="overflow:auto;">
                	    <div class="nav-item">
